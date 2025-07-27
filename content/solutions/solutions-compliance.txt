@@ -1,0 +1,79 @@
+# SOLUTION PAGE
+
+Streamlined Compliance for OT Environments  
+AKM SecureKey simplifies compliance by fully automating the provisioning, renewal, and revocation of encryption keys — saving time and reducing risk in even the most complex OT environments.
+
+---
+
+# KEY FEATURES
+
+## Provision, Renew, Revoke — Automatically  
+Built-in scheduling ensures continuous coverage, with zero downtime.
+
+## Instant Revocation  
+Terminate compromised credentials instantly — no waiting for manual intervention.
+
+## Regulatory Alignment  
+Complies with ISA 62443, NIS2, EU Cyber Resilience Act, NIST 800-57, and more.
+
+---
+
+# USE CASES
+
+- **Automating Key Management**  
+  For thousands of IoT devices
+
+- **GDPR and CRA Compliance**  
+  Enabling GDPR and CRA compliance in hospital networks
+
+- **Regulatory Support**  
+  Supporting regulators with real-time audit trails
+
+---
+
+# CTA
+
+Get Started with AKM SecureKey  
+Ready to elevate your OT cybersecurity? Contact us to explore our solution through a personalized demo.
+
+First name*  
+Last name*  
+Email*  
+Phone*  
+
+Message*  
+Write your message here
+
+[Request a Demo]
+
+---
+
+# FOOTER MENU
+
+Home  
+About  
+Solutions  
+- Resilient Key Protection in Any Environment  
+- Seamless Integration Across OT Platforms  
+- Streamlined Compliance for OT Environment  
+Industries  
+- Mining  
+- Financial Services (Data Centers with OT)  
+- Government (Public Sector ICS)  
+- Chemical Processing  
+- Pharmaceuticals  
+- Aerospace & Defense  
+- Transportation (Railways)  
+- Utilities (Power Grids)  
+- Manufacturing (Automotive)  
+- Energy (Oil & Gas)  
+Contact
+
+SOCIAL  
+LinkedIn
+
+CONTACT  
+info@akmcyber.com  
+1101 Wilson Boulevard, 6th Floor  
+Arlington, Virginia  
+22209, USA

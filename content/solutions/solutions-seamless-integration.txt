@@ -1,0 +1,62 @@
+# SOLUTION PAGE
+
+Seamless Integration Across OT Platforms  
+AKM SecureKey plugs directly into existing OT stacks using modular, RESTful APIs — no custom development or heavy middleware required. It scales horizontally to support massive device deployments, and vertically across multiple industry verticals.
+
+---
+
+# USE CASES
+
+- **Embedding**  
+  Into smart grid management systems
+
+- **Securing**  
+  Medical IoT devices
+
+- **Scaling**  
+  Encrypted communications in transportation infrastructure
+
+---
+
+# KEY FEATURES
+
+## Micro Footprint  
+Endpoint agents <10KB, deployable on constrained systems
+
+## API-Driven Architecture  
+Integrates securely into modern and legacy systems alike
+
+## Built-In Flexibility  
+Crypto-agnostic design supports AES, HMAC, SHA256/512, and other NIST/FIPS-approved schemes
+
+---
+
+# FOOTER MENU
+
+Home  
+About  
+Solutions  
+- Resilient Key Protection in Any Environment  
+- Seamless Integration Across OT Platforms  
+- Streamlined Compliance for OT Environment  
+Industries  
+- Mining  
+- Financial Services (Data Centers with OT)  
+- Government (Public Sector ICS)  
+- Chemical Processing  
+- Pharmaceuticals  
+- Aerospace & Defense  
+- Transportation (Railways)  
+- Utilities (Power Grids)  
+- Manufacturing (Automotive)  
+- Energy (Oil & Gas)  
+Contact
+
+SOCIAL  
+LinkedIn
+
+CONTACT  
+info@akmcyber.com  
+1101 Wilson Boulevard, 6th Floor  
+Arlington, Virginia  
+22209, USA

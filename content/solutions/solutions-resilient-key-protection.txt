@@ -1,0 +1,66 @@
+# SOLUTION PAGE
+
+Resilient Key Protection in Any Environment
+
+Whether fully air-gapped or intermittently connected, AKM SecureKey provides dynamic, autonomous key management that protects industrial control systems from intrusion and spoofing — without human input or third-party cloud dependencies.
+
+---
+
+# KEY FEATURES
+
+## Secure Key Generation & Distribution  
+Built on NIST/FIPS algorithms and AKM Trust Relationships — no certificate servers, no internet required
+
+## Dynamic Key Refresh  
+Credentials rotate automatically with perfect forward secrecy, even when offline
+
+## Tamper-Proof Logging  
+All actions recorded for real-time or retroactive auditing under CRA and IEC 62443
+
+## Audit-Ready Logs  
+Provides tamper-proof records for compliance with EU Cyber Resilience Act and ISA 62443
+
+---
+
+# USE CASES
+
+- **SCADA**  
+  Securing SCADA in offshore wind farms
+
+- **PLCs**  
+  Protecting PLCs in air-gapped factories
+
+- **Isolated Infrastructure**  
+  Preventing ransomware in isolated utilities infrastructure
+
+---
+
+# FOOTER MENU
+
+Home  
+About  
+Solutions  
+- Resilient Key Protection in Any Environment  
+- Seamless Integration Across OT Platforms  
+- Streamlined Compliance for OT Environment  
+Industries  
+- Mining  
+- Financial Services (Data Centers with OT)  
+- Government (Public Sector ICS)  
+- Chemical Processing  
+- Pharmaceuticals  
+- Aerospace & Defense  
+- Transportation (Railways)  
+- Utilities (Power Grids)  
+- Manufacturing (Automotive)  
+- Energy (Oil & Gas)  
+Contact
+
+SOCIAL  
+LinkedIn
+
+CONTACT  
+info@akmcyber.com  
+1101 Wilson Boulevard, 6th Floor  
+Arlington, Virginia  
+22209, USA

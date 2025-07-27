@@ -1,0 +1,80 @@
+# INDUSTRY PAGE – UTILITIES (POWER GRIDS)
+
+Ensure Grid Resilience and Compliance with AKM SecureKey
+
+Substations, transformers, and ICS in power grids must operate with high reliability and security. AKM SecureKey replaces certificate-based systems with faster, lighter authentication designed for critical infrastructure.
+
+---
+
+# KEY CAPABILITIES
+
+- No-cloud-required credential refresh  
+- Embedded CIA (Confidentiality, Integrity, Availability) for every data packet  
+- Compliance automation for CRA and NIS2  
+
+[Back to Industry List]
+
+---
+
+# BENEFITS
+
+- Stop breaches before they compromise uptime  
+- Avoid $20M+ loss from grid interruptions  
+- Reduce manual key maintenance to near zero  
+
+---
+
+# CUSTOMER QUOTE
+
+What Our Clients Say  
+"AKM SecureKey gave us the confidence to secure substations at scale."  
+— Security Manager, Utility Provider
+
+---
+
+# CTA
+
+Get Started with AKM SecureKey  
+Ready to secure your industry’s ICS? Contact us to explore AKM SecureKey through a personalized demo.
+
+First name*  
+Last name*  
+Email*  
+Phone*  
+
+Message*  
+Write your message here
+
+[Request a Demo]
+
+---
+
+# FOOTER MENU
+
+Home  
+About  
+Solutions  
+- Resilient Key Protection in Any Environment  
+- Seamless Integration Across OT Platforms  
+- Streamlined Compliance for OT Environment  
+Industries  
+- Mining  
+- Financial Services (Data Centers with OT)  
+- Government (Public Sector ICS)  
+- Chemical Processing  
+- Pharmaceuticals  
+- Aerospace & Defense  
+- Transportation (Railways)  
+- Utilities (Power Grids)  
+- Manufacturing (Automotive)  
+- Energy (Oil & Gas)  
+Contact
+
+SOCIAL  
+LinkedIn
+
+CONTACT  
+info@akmcyber.com  
+1101 Wilson Boulevard, 6th Floor  
+Arlington, Virginia  
+22209, USA

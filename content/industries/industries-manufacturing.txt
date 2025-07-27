@@ -1,0 +1,80 @@
+# INDUSTRY PAGE – MANUFACTURING (AUTOMOTIVE)
+
+Streamline Automotive OT Security with AKM SecureKey
+
+Modern assembly lines and robotics rely on fast, deterministic operations. AKM SecureKey automates cryptographic key management for PLCs and field controllers — enabling secure, air-gapped production with no need for manual rekeying.
+
+---
+
+# KEY CAPABILITIES
+
+- API-driven key lifecycle integration with industrial control platform  
+- Autonomous device authentication across PLC networks  
+- Embedded compliance for ISA 62443 and NIST 800-82  
+
+[Back to Industry List]
+
+---
+
+# BENEFITS
+
+- Maintain uptime and production continuity  
+- Slash manual compliance costs and effort  
+- Secure edge devices without modifying legacy code  
+
+---
+
+# CUSTOMER QUOTE
+
+What Our Clients Say  
+"AKM SecureKey made our OT security both bulletproof and effortless."  
+— CISO, Automotive Manufacturer
+
+---
+
+# CTA
+
+Get Started with AKM SecureKey  
+Ready to secure your industry’s ICS? Contact us to explore AKM SecureKey through a personalized demo.
+
+First name*  
+Last name*  
+Email*  
+Phone*  
+
+Message*  
+Write your message here
+
+[Request a Demo]
+
+---
+
+# FOOTER MENU
+
+Home  
+About  
+Solutions  
+- Resilient Key Protection in Any Environment  
+- Seamless Integration Across OT Platforms  
+- Streamlined Compliance for OT Environment  
+Industries  
+- Mining  
+- Financial Services (Data Centers with OT)  
+- Government (Public Sector ICS)  
+- Chemical Processing  
+- Pharmaceuticals  
+- Aerospace & Defense  
+- Transportation (Railways)  
+- Utilities (Power Grids)  
+- Manufacturing (Automotive)  
+- Energy (Oil & Gas)  
+Contact
+
+SOCIAL  
+LinkedIn
+
+CONTACT  
+info@akmcyber.com  
+1101 Wilson Boulevard, 6th Floor  
+Arlington, Virginia  
+22209, USA

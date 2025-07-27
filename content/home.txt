@@ -1,0 +1,130 @@
+# HERO SECTION
+AKM SecureKey: Next-Gen OT Cybersecurity  
+Protect critical infrastructure with a unified, patent-backed solution for scalable key management and regulatory peace of mind.
+
+Trusted by global leaders to simplify operations and eliminate breach risk at the edge.
+
+Secure. Automate. Scale.  
+[Contact Us]
+
+# CTA – FUTURE OF OT SECURITY
+Built for the Future of OT Security  
+[Request a Demo]
+
+# FOUR FEATURE BLOCKS
+Patent-Backed Security  
+Four patents power our unique approach to autonomous key management
+
+High-Performance Codebase  
+C-based, modular components under 10KB — optimized for embedded and air-gapped systems
+
+One-Time Setup  
+Fully autonomous and self-healing, with no ongoing human oversight
+
+Compliance Ready  
+Aligned with EU and global cybersecurity mandates like IEC 62443 and NIS2
+
+# BRAND STATEMENT
+AKM isn’t just a better product. It’s a better philosophy:  
+Trust nothing. Automate everything. Secure by design.
+
+[About Us]
+
+# OUR STORY PREVIEW
+A Next-Gen Security Model, Born for the Edge  
+AKM was created by engineers who saw how traditional security models were failing the systems that matter most — not laptops or apps, but power grids, pipelines, satellites, and hospital devices.
+
+Rather than patch PKI for OT, we started from scratch.
+
+We’re redefining operational cybersecurity with a next-gen platform trusted by leaders in energy, manufacturing, and beyond. Our mission is simple: Protect the systems that power our world — without relying on the cloud, manual oversight, or assumptions that breaches are inevitable.
+
+# TRUST FRAME (TECH PILLARS)
+ZERO TRUST isn't a buzzword. It's built in.
+
+Quantum Resilient  
+Framework that authenticates every connection
+
+One-Time Setup  
+A setup that runs forever without human oversight
+
+Implicit Zero Trust  
+A system that delivers implicit Zero Trust, by default, with every frame
+
+10KB Footprint  
+Architected server/client multitrack applications for broadcasting
+
+# PROBLEM STATEMENT
+How We Solve The Challenge  
+OT Cybersecurity Is Broken
+
+Industrial systems are under siege. Attacks are increasing 30% year over year, causing more than $10 billion in annual damage. And yet, most cybersecurity solutions still rely on outdated Public Key Infrastructure (PKI) — too complex, too manual, and completely unusable in air-gapped or resource-constrained environments.
+
+As regulators demand security by design, organizations are stuck choosing between fragile legacy tools or risky cloud dependence.
+
+# SOLUTION BLOCKS
+
+## Solution #1
+Unbreakable Key Protection for Air-Gapped ICS  
+Secure disconnected OT environments with AKM SecureKey. Generate, distribute, and rotate encryption keys entirely offline — ensuring critical infrastructure is never exposed.
+
+Benefit: Fortifies systems where cloud-dependent security solutions can’t operate.  
+Use Case: Protects SCADA systems in oil refineries from cyber intrusions.  
+[Learn More]
+
+## Solution #2
+Streamlined Compliance for OT Key Management  
+Simplify compliance and reduce manual overhead. AKM SecureKey automates provisioning, renewal, and revocation of keys across OT devices — helping meet global standards.
+
+Benefit: Saves time and ensures audit-ready operations.  
+Use Case: Streamlines the key lifecycle for a factory’s 1,000+ IoT devices.  
+[Learn More]
+
+## Solution #3
+Seamless Key Management for Any OT Platform  
+Scale securely across your infrastructure. Our modular, API-driven solution integrates into any OT stack — with minimal processing overhead and no PKI complexity.
+
+Benefit: Enhances your existing security posture without disruption.  
+Use Case: Embeds key management into a hospital’s IoT medical device network.  
+[Learn More]
+
+# INDUSTRIES WE SERVE
+Explore Industry Solutions
+
+Energy: Secure isolated grids and remote pipelines  
+Manufacturing: Protect PLCs, SCADA, and connected factory assets  
+Utilities: Ensure security and compliance for essential infrastructure  
+[Learn More]
+
+# FINAL CTA
+Ready to Secure Your OT Future?  
+Discover how AKM SecureKey can protect your industrial systems. Request a demo or connect with our team to explore deployment and partnership opportunities.  
+[Request a Demo]
+
+# FOOTER MENU
+Home  
+About  
+Solutions  
+- Resilient Key Protection in Any Environment  
+- Seamless Integration Across OT Platforms  
+- Streamlined Compliance for OT Environment  
+Industries  
+- Mining  
+- Financial Services (Data Centers with OT)  
+- Government (Public Sector ICS)  
+- Chemical Processing  
+- Pharmaceuticals  
+- Aerospace & Defense  
+- Transportation (Railways)  
+- Utilities (Power Grids)  
+- Manufacturing (Automotive)  
+- Energy (Oil & Gas)  
+Contact
+
+SOCIAL  
+LinkedIn
+
+CONTACT  
+info@akmcyber.com  
+1101 Wilson Boulevard, 6th Floor  
+Arlington, Virginia  
+22209, USA

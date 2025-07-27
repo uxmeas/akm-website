@@ -1,0 +1,116 @@
+# INDUSTRIES
+
+Why AKM SecureKey for Your Industry?
+
+## Robust Protection  
+Frame-level encryption and authentication for air-gapped and connected systems alike.
+
+## Automated Compliance  
+Built-in audit logging and credential rotation to align with ISA 62443, EU CRA, and NIST frameworks.
+
+## Flexible Deployment  
+A lightweight footprint (<10KB) that runs on PLCs, SCADA, and edge devices with no rip-and-replace required.
+
+---
+
+# AKM SecureKey: Protecting Critical Industries Worldwide
+
+Cyberattacks on industrial systems are rising 30% annually, costing over $10 billion each year. Legacy PKI-based solutions are no longer sufficient. They’re too manual, too cloud-dependent, and ill-suited for the unique realities of operational technology (OT).
+
+AKM SecureKey delivers a unified, patent-backed cybersecurity framework that protects industrial control systems (ICS) across critical sectors — from energy and manufacturing to utilities and government. Built for air-gapped, constrained, and complex environments, it offers unmatched protection, compliance automation, and seamless platform integration.
+
+---
+
+# INDUSTRIES WE SERVE
+
+Explore how AKM SecureKey empowers OT teams across industries to secure operations, ensure compliance, and future-proof security strategies.
+
+## Energy  
+Protect SCADA in remote rigs and substations with offline credential refresh.  
+[Learn More]
+
+## Manufacturing  
+Automate key lifecycle management for PLCs and robotics at scale.  
+[Learn More]
+
+## Utilities  
+Fortify grid infrastructure against nation-state threats and ransomware.  
+[Learn More]
+
+## Transportation  
+Ensure signaling system integrity in air-gapped and online conditions.  
+[Learn More]
+
+## Aerospace & Defense  
+Scale Zero Trust to secure defense systems in disconnected theaters.  
+[Learn More]
+
+## Pharmaceuticals  
+Protect production lines while maintaining GMP and cyber compliance.  
+[Learn More]
+
+## Chemical Processing  
+Eliminate manual errors and reduce audit exposure in high-risk ICS.  
+[Learn More]
+
+## Government  
+Secure vital ICS at municipal, state, and federal levels.  
+[Learn More]
+
+## Financial Services  
+Extend Zero Trust to cooling and facility ICS in hybrid environments.  
+[Learn More]
+
+## Mining  
+Protect isolated, high-value ICS to avoid costly operational disruption.  
+[Learn More]
+
+---
+
+# CUSTOMER VOICES
+
+What Our Clients Say
+
+"AKM SecureKey transformed our OT security. Its seamless integration and compliance automation saved us countless hours while protecting our critical systems."
+
+— Energy Sector CISO
+
+---
+
+# FINAL CTA
+
+Ready to Secure Your Industry?  
+Discover how AKM SecureKey delivers unified, Zero Trust security that works in the real world. Request a personalized demo today.  
+[Request a Demo]
+
+---
+
+# FOOTER MENU
+
+Home  
+About  
+Solutions  
+- Resilient Key Protection in Any Environment  
+- Seamless Integration Across OT Platforms  
+- Streamlined Compliance for OT Environment  
+Industries  
+- Mining  
+- Financial Services (Data Centers with OT)  
+- Government (Public Sector ICS)  
+- Chemical Processing  
+- Pharmaceuticals  
+- Aerospace & Defense  
+- Transportation (Railways)  
+- Utilities (Power Grids)  
+- Manufacturing (Automotive)  
+- Energy (Oil & Gas)  
+Contact
+
+SOCIAL  
+LinkedIn
+
+CONTACT  
+info@akmcyber.com  
+1101 Wilson Boulevard, 6th Floor  
+Arlington, Virginia  
+22209, USA

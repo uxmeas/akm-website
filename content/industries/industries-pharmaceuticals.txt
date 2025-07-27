@@ -1,0 +1,80 @@
+# INDUSTRY PAGE – PHARMACEUTICALS
+
+Secure GMP Production and ICS with AKM SecureKey
+
+Pharmaceutical manufacturing requires uncompromising control and compliance. AKM SecureKey embeds cryptographic identity and access controls into air-gapped systems, enabling secure production from formulation to packaging.
+
+---
+
+# KEY CAPABILITIES
+
+- Tamper-resistant key provisioning and authentication  
+- GMP-aligned audit reporting for EU and U.S. regulators  
+- No-dependency cryptographic enforcement on the factory floor  
+
+[Back to Industry List]
+
+---
+
+# BENEFITS
+
+- Prevent malicious access to formulation or packaging equipment  
+- Protect IP and maintain batch integrity  
+- Reduce compliance prep time by 60%  
+
+---
+
+# CUSTOMER QUOTE
+
+What Our Clients Say  
+“AKM SecureKey secures our production lines and streamlines compliance.”  
+— Pharma Security Manager
+
+---
+
+# CTA
+
+Get Started with AKM SecureKey  
+Ready to secure your industry’s ICS? Contact us to explore AKM SecureKey through a personalized demo.
+
+First name*  
+Last name*  
+Email*  
+Phone*  
+
+Message*  
+Write your message here
+
+[Request a Demo]
+
+---
+
+# FOOTER MENU
+
+Home  
+About  
+Solutions  
+- Resilient Key Protection in Any Environment  
+- Seamless Integration Across OT Platforms  
+- Streamlined Compliance for OT Environment  
+Industries  
+- Mining  
+- Financial Services (Data Centers with OT)  
+- Government (Public Sector ICS)  
+- Chemical Processing  
+- Pharmaceuticals  
+- Aerospace & Defense  
+- Transportation (Railways)  
+- Utilities (Power Grids)  
+- Manufacturing (Automotive)  
+- Energy (Oil & Gas)  
+Contact
+
+SOCIAL  
+LinkedIn
+
+CONTACT  
+info@akmcyber.com  
+1101 Wilson Boulevard, 6th Floor  
+Arlington, Virginia  
+22209, USA

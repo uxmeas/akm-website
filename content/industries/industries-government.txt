@@ -1,0 +1,80 @@
+# INDUSTRY PAGE – GOVERNMENT & PUBLIC SECTOR ICS
+
+Modernize and Secure Government ICS with AKM SecureKey
+
+From utility districts to national defense networks, public sector ICS require secure communication that doesn’t rely on fragile cloud connections or vulnerable certificates.
+
+---
+
+# KEY CAPABILITIES
+
+- Local, autonomous cryptographic identity  
+- NIST and CRA-compliant credential lifecycle  
+- Cross-agency coordination without shared credential stores  
+
+[Back to Industry List]
+
+---
+
+# BENEFITS
+
+- Harden systems while reducing operational complexity  
+- Prevent cyber intrusion in critical services  
+- Achieve continuous compliance without ongoing manual input  
+
+---
+
+# CUSTOMER QUOTE
+
+What Our Clients Say  
+“AKM SecureKey simplifies our ICS compliance and enhances our security platform.”  
+— Public Sector Security Lead
+
+---
+
+# CTA
+
+Get Started with AKM SecureKey  
+Ready to secure your industry’s ICS? Contact us to explore AKM SecureKey through a personalized demo.
+
+First name*  
+Last name*  
+Email*  
+Phone*  
+
+Message*  
+Write your message here
+
+[Request a Demo]
+
+---
+
+# FOOTER MENU
+
+Home  
+About  
+Solutions  
+- Resilient Key Protection in Any Environment  
+- Seamless Integration Across OT Platforms  
+- Streamlined Compliance for OT Environment  
+Industries  
+- Mining  
+- Financial Services (Data Centers with OT)  
+- Government (Public Sector ICS)  
+- Chemical Processing  
+- Pharmaceuticals  
+- Aerospace & Defense  
+- Transportation (Railways)  
+- Utilities (Power Grids)  
+- Manufacturing (Automotive)  
+- Energy (Oil & Gas)  
+Contact
+
+SOCIAL  
+LinkedIn
+
+CONTACT  
+info@akmcyber.com  
+1101 Wilson Boulevard, 6th Floor  
+Arlington, Virginia  
+22209, USA

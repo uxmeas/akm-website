@@ -1,0 +1,85 @@
+# ABOUT AKM
+
+With over a century of combined experience across mission-critical systems and advanced cryptography, the AKM Cyber Corp. leadership team has pioneered the field of quantum-resilient security. Their work spans real-time embedded systems, zero-trust architectures, secure key management, and global standards development for industrial control systems (ICS). From aerospace and defense to rail, energy, and healthcare, AKM’s founders bring a deep legacy of cybersecurity innovation to the world’s most sensitive environments.
+
+This core expertise has been honed through high-impact collaborations with organizations like Boeing, General Dynamics, Magna, Bombardier, Airbus, NSA, NASA, EASA, and the Department of Defense, and continues to shape the future of secure infrastructure worldwide.
+
+# OUR STORY
+
+AKM was founded to solve a problem most in the cybersecurity industry have accepted as unsolvable: how to embed true Zero Trust into every transaction — without relying on legacy Public Key Infrastructure, excessive overhead, or fragile workarounds.
+
+Our founding team came together with over 100 years of combined experience across aerospace, defense, critical infrastructure, and embedded systems. We’ve built avionics for Airbus, security protocols for Boeing, hardened control systems for global rail networks, and contributed to international standards like IEC 62443 and CENELEC TS-50701. We saw firsthand how existing solutions — particularly PKI — fail to scale, struggle to comply, and leave even air-gapped systems vulnerable.
+
+So we built something BETTER.
+
+AKM SecureKey is a quantum-resilient cybersecurity platform that eliminates the need for traditional certificates and central authorities. It’s the only software solution that fulfills all tenets of the CIA Triad — Confidentiality, Integrity, and Availability — at the frame level. Our patented architecture ensures every endpoint, every transmission, and every device is authenticated, encrypted, and secure by design. It works offline or online, in a factory, on a satellite, or under the sea.
+
+With a one-time setup, no need for external validation, and zero ongoing maintenance, AKM flips the cybersecurity model from reactive to resilient. And for environments requiring extra hardening, our low-cost hardware companion module brings added protection — with a path to further scalability via FPGA or ASIC.
+
+Today, AKM is trusted by early adopters in energy, manufacturing, healthcare, and defense. We are shaping the future of secure systems — replacing complexity with clarity, fragility with confidence, and assumptions with proof.
+
+This is the cybersecurity rewrite the industry has been waiting for.
+
+# OUR TEAM
+
+The Minds Behind AKM
+
+- Bart Shields  
+  Founder, Chief Architect & Inventor  
+  [Learn More]
+
+- Larry Butler  
+  Founder and Chief Engineer  
+  [Learn More]
+
+- Brian McGowan  
+  Chief Executive Officer  
+  [Learn More]
+
+- Klemens Geiger  
+  Chief Compliance Officer  
+  [Learn More]
+
+- Doug McLean  
+  Chief Product Officer  
+  [Learn More]
+
+- Chase Exon, Esq.  
+  General Counsel  
+  [Learn More]
+
+# FINAL CTA
+
+Ready to Secure Your OT Future?  
+Discover how AKM SecureKey can protect your industrial systems. Request a demo or connect with our team to explore deployment and partnership opportunities.  
+[Request a Demo]
+
+# FOOTER MENU
+
+Home  
+About  
+Solutions  
+- Resilient Key Protection in Any Environment  
+- Seamless Integration Across OT Platforms  
+- Streamlined Compliance for OT Environment  
+Industries  
+- Mining  
+- Financial Services (Data Centers with OT)  
+- Government (Public Sector ICS)  
+- Chemical Processing  
+- Pharmaceuticals  
+- Aerospace & Defense  
+- Transportation (Railways)  
+- Utilities (Power Grids)  
+- Manufacturing (Automotive)  
+- Energy (Oil & Gas)  
+Contact
+
+SOCIAL  
+LinkedIn
+
+CONTACT  
+info@akmcyber.com  
+1101 Wilson Boulevard, 6th Floor  
+Arlington, Virginia  
+22209, USA

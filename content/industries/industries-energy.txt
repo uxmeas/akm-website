@@ -1,0 +1,80 @@
+# INDUSTRY PAGE – ENERGY (OIL & GAS)
+
+Secure Your Oil & Gas Operations with AKM SecureKey
+
+Oil and gas operations depend on secure, uninterrupted control systems, yet traditional cybersecurity falls short in air-gapped, high-risk environments. AKM SecureKey delivers quantum-resilient key management to protect SCADA systems, compressor stations, and control nodes with no need for external connectivity.
+
+---
+
+# KEY CAPABILITIES
+
+- Autonomous credential rotation for isolated OT environments  
+- Defense against supply-chain tampering and lateral movement  
+- Compliance automation for ISA 62443 and EU Cyber Resilience Act  
+
+[Back to Industry List]
+
+---
+
+# BENEFITS
+
+- Avoid $10M+ disruptions due to system downtime or breach  
+- Simplify audits with built-in compliance reporting  
+- Deploy in remote or offshore rigs with zero maintenance  
+
+---
+
+# CUSTOMER QUOTE
+
+What Our Clients Say  
+"We now have unbreakable protection for our SCADA systems — and compliance takes half the time."  
+— Security Director, Offshore Rig
+
+---
+
+# CTA
+
+Get Started with AKM SecureKey  
+Ready to secure your industry’s ICS? Contact us to explore AKM SecureKey through a personalized demo.
+
+First name*  
+Last name*  
+Email*  
+Phone*  
+
+Message*  
+Write your message here
+
+[Request a Demo]
+
+---
+
+# FOOTER MENU
+
+Home  
+About  
+Solutions  
+- Resilient Key Protection in Any Environment  
+- Seamless Integration Across OT Platforms  
+- Streamlined Compliance for OT Environment  
+Industries  
+- Mining  
+- Financial Services (Data Centers with OT)  
+- Government (Public Sector ICS)  
+- Chemical Processing  
+- Pharmaceuticals  
+- Aerospace & Defense  
+- Transportation (Railways)  
+- Utilities (Power Grids)  
+- Manufacturing (Automotive)  
+- Energy (Oil & Gas)  
+Contact
+
+SOCIAL  
+LinkedIn
+
+CONTACT  
+info@akmcyber.com  
+1101 Wilson Boulevard, 6th Floor  
+Arlington, Virginia  
+22209, USA

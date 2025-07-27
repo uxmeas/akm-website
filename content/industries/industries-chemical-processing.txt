@@ -1,0 +1,80 @@
+# INDUSTRY PAGE – CHEMICAL PROCESSING
+
+Protect Process Automation and Control Systems
+
+Chemical plants face high-consequence risk in the event of ICS compromise. AKM SecureKey ensures secure automation across batch controls, flow systems, and safety interlocks.
+
+---
+
+# KEY CAPABILITIES
+
+- Lightweight cryptographic libraries for embedded PLCs  
+- Certificate-free access control and telemetry encryption  
+- Resilient to supply-chain attacks and insider threats  
+
+[Back to Industry List]
+
+---
+
+# BENEFITS
+
+- Reduce incident likelihood and downtime  
+- Ensure system safety and personnel protection  
+- Meet global compliance with minimal IT overhead  
+
+---
+
+# CUSTOMER QUOTE
+
+What Our Clients Say  
+“AKM SecureKey ensures our plant’s compliance and integrates seamlessly.”  
+— Chemical Plant CISO
+
+---
+
+# CTA
+
+Get Started with AKM SecureKey  
+Ready to secure your industry’s ICS? Contact us to explore AKM SecureKey through a personalized demo.
+
+First name*  
+Last name*  
+Email*  
+Phone*  
+
+Message*  
+Write your message here
+
+[Request a Demo]
+
+---
+
+# FOOTER MENU
+
+Home  
+About  
+Solutions  
+- Resilient Key Protection in Any Environment  
+- Seamless Integration Across OT Platforms  
+- Streamlined Compliance for OT Environment  
+Industries  
+- Mining  
+- Financial Services (Data Centers with OT)  
+- Government (Public Sector ICS)  
+- Chemical Processing  
+- Pharmaceuticals  
+- Aerospace & Defense  
+- Transportation (Railways)  
+- Utilities (Power Grids)  
+- Manufacturing (Automotive)  
+- Energy (Oil & Gas)  
+Contact
+
+SOCIAL  
+LinkedIn
+
+CONTACT  
+info@akmcyber.com  
+1101 Wilson Boulevard, 6th Floor  
+Arlington, Virginia  
+22209, USA

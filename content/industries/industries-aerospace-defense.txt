@@ -1,0 +1,80 @@
+# INDUSTRY PAGE – AEROSPACE & DEFENSE
+
+Deliver Frame-Level Zero Trust in Mission-Critical Systems
+
+Defense systems — from aircraft to unmanned vehicles — require hardened, certifiable cybersecurity. AKM SecureKey provides embedded, quantum-resilient key infrastructure without real-time backend connections.
+
+---
+
+# KEY CAPABILITIES
+
+- Embedded credentialing with low memory footprint (<10KB)  
+- Autonomous key regeneration and self-healing logic  
+- Platform-neutral design for land, air, sea, and space assets  
+
+[Back to Industry List]
+
+---
+
+# BENEFITS
+
+- Achieve “Security by Design” without PKI complexity  
+- Eliminate operator intervention for crypto management  
+- Comply with DoD ZTA mandates and GCIA standards  
+
+---
+
+# CUSTOMER QUOTE
+
+What Our Clients Say  
+“AKM SecureKey scales our defense ICS security, and simplifies compliance.”  
+— Defense Contractor Security Director
+
+---
+
+# CTA
+
+Get Started with AKM SecureKey  
+Ready to secure your industry’s ICS? Contact us to explore AKM SecureKey through a personalized demo.
+
+First name*  
+Last name*  
+Email*  
+Phone*  
+
+Message*  
+Write your message here
+
+[Request a Demo]
+
+---
+
+# FOOTER MENU
+
+Home  
+About  
+Solutions  
+- Resilient Key Protection in Any Environment  
+- Seamless Integration Across OT Platforms  
+- Streamlined Compliance for OT Environment  
+Industries  
+- Mining  
+- Financial Services (Data Centers with OT)  
+- Government (Public Sector ICS)  
+- Chemical Processing  
+- Pharmaceuticals  
+- Aerospace & Defense  
+- Transportation (Railways)  
+- Utilities (Power Grids)  
+- Manufacturing (Automotive)  
+- Energy (Oil & Gas)  
+Contact
+
+SOCIAL  
+LinkedIn
+
+CONTACT  
+info@akmcyber.com  
+1101 Wilson Boulevard, 6th Floor  
+Arlington, Virginia  
+22209, USA

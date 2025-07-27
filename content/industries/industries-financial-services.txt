@@ -1,0 +1,80 @@
+# INDUSTRY PAGE – FINANCIAL SERVICES (DATA CENTERS WITH OT)
+
+Converge IT/OT Security for Critical Financial Systems
+
+Data centers and financial platforms with OT components—cooling systems, power redundancy, and access control—need cybersecurity that bridges IT and OT domains. AKM SecureKey does just that.
+
+---
+
+# KEY CAPABILITIES
+
+- API-driven security layer for operational tech within data environments  
+- Autonomous credential management with no centralized vaults  
+- Encryption and authentication for infrastructure monitoring systems  
+
+[Back to Industry List]
+
+---
+
+# BENEFITS
+
+- Prevent costly service disruption from OT attacks  
+- Maintain uptime for regulated digital asset infrastructure  
+- Reduce time to implement compliant, resilient controls  
+
+---
+
+# CUSTOMER QUOTE
+
+What Our Clients Say  
+“AKM SecureKey unifies our IT/OT security and ensures compliance.”  
+— Financial Services CISO
+
+---
+
+# CTA
+
+Get Started with AKM SecureKey  
+Ready to secure your industry’s ICS? Contact us to explore AKM SecureKey through a personalized demo.
+
+First name*  
+Last name*  
+Email*  
+Phone*  
+
+Message*  
+Write your message here
+
+[Request a Demo]
+
+---
+
+# FOOTER MENU
+
+Home  
+About  
+Solutions  
+- Resilient Key Protection in Any Environment  
+- Seamless Integration Across OT Platforms  
+- Streamlined Compliance for OT Environment  
+Industries  
+- Mining  
+- Financial Services (Data Centers with OT)  
+- Government (Public Sector ICS)  
+- Chemical Processing  
+- Pharmaceuticals  
+- Aerospace & Defense  
+- Transportation (Railways)  
+- Utilities (Power Grids)  
+- Manufacturing (Automotive)  
+- Energy (Oil & Gas)  
+Contact
+
+SOCIAL  
+LinkedIn
+
+CONTACT  
+info@akmcyber.com  
+1101 Wilson Boulevard, 6th Floor  
+Arlington, Virginia  
+22209, USA
