@@ -1,0 +1,118 @@
+/* Debug styles for layout visualization */
+.debug *:not(g):not(path) {
+  outline: 1px solid rgba(255, 0, 0, 0.1);
+}
+
+/* Visualize container boundaries */
+.debug .container,
+.debug .container-fluid,
+.debug .container-xxl {
+  background-color: rgba(0, 0, 255, 0.03) !important;
+  outline: 1px dashed rgba(0, 0, 255, 0.2) !important;
+}
+
+/* Visualize rows */
+.debug .row {
+  background-color: rgba(0, 128, 0, 0.03) !important;
+  outline: 1px dashed rgba(0, 128, 0, 0.2) !important;
+  min-height: 30px;
+  margin-bottom: 1rem;
+}
+
+/* Visualize columns */
+.debug [class^="col-"] {
+  background-color: rgba(255, 165, 0, 0.05) !important;
+  outline: 1px dashed rgba(255, 165, 0, 0.3) !important;
+  min-height: 30px;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+/* Visualize gaps */
+.debug .g-4 > *,
+.debug .gx-4 > * {
+  outline: 1px dashed rgba(255, 0, 255, 0.3) !important;
+}
+
+/* Visualize spacing utilities */
+.debug [class*="py-"],
+.debug [class*="pt-"],
+.debug [class*="pb-"],
+.debug [class*="my-"],
+.debug [class*="mt-"],
+.debug [class*="mb-"] {
+  position: relative;
+}
+
+.debug [class*="py-"]::before,
+.debug [class*="pt-"]::before,
+.debug [class*="pb-"]::before,
+.debug [class*="my-"]::before,
+.debug [class*="mt-"]::before,
+.debug [class*="mb-"]::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.debug [class*="py-"]::before,
+.debug [class*="pt-"]::before,
+.debug [class*="my-"]::before,
+.debug [class*="mt-"]::before {
+  top: 0;
+}
+
+.debug [class*="py-"]::after,
+.debug [class*="pb-"]::after,
+.debug [class*="my-"]::after,
+.debug [class*="mb-"]::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Responsive breakpoint indicators */
+.debug .breakpoint-indicator {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background: #000;
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  z-index: 9999;
+  font-family: monospace;
+}
+
+@media (max-width: 575.98px) {
+  .debug .breakpoint-indicator::after { content: 'XS (<576px)'; }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .debug .breakpoint-indicator::after { content: 'SM (≥576px)'; }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .debug .breakpoint-indicator::after { content: 'MD (≥768px)'; }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .debug .breakpoint-indicator::after { content: 'LG (≥992px)'; }
+}
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .debug .breakpoint-indicator::after { content: 'XL (≥1200px)'; }
+}
+
+@media (min-width: 1400px) {
+  .debug .breakpoint-indicator::after { content: 'XXL (≥1400px)'; }
+}
