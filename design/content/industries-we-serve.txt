@@ -1,0 +1,68 @@
+# INDUSTRIES WE SERVE SECTION
+
+<div class="self-stretch justify-start text-zinc-900 text-5xl font-bold font-['Inter'] leading-[72px]">Industries We Serve</div>
+171A1F; // 
+// Industries We Serve
+text-zinc-900
+text-5xl
+font-bold
+font-['Inter']
+leading-[72px]
+
+<div class="self-stretch inline-flex flex-col justify-start items-start gap-8">
+    <div class="self-stretch justify-start text-zinc-900 text-5xl font-bold font-['Inter'] leading-[72px]">Industries We Serve</div>
+    <div class="h-16 px-6 outline outline-[3px] outline-offset-[-3px] outline-black inline-flex justify-center items-center gap-2">
+        <div class="justify-start text-black text-xl font-semibold font-['Inter'] leading-loose">Explore Industry Solutions</div>
+        <div class="w-6 h-6 relative overflow-hidden">
+            <div class="w-2.5 h-2.5 left-[7px] top-[7px] absolute outline outline-2 outline-offset-[-1px] outline-black/90"></div>
+        </div>
+    </div>
+</div>
+
+<div data-property-1="Variant7" class="self-stretch self-stretch p-6 bg-black/90 inline-flex flex-col justify-start items-start gap-6">
+    <div class="self-stretch inline-flex justify-start items-center gap-6">
+        <div class="w-12 h-12 bg-white/25 rounded-full"></div>
+        <div class="justify-start text-white text-xl font-semibold font-['Inter'] leading-loose">Energy</div>
+    </div>
+    <div class="self-stretch flex flex-col justify-start items-start gap-6">
+        <div class="self-stretch justify-start text-white text-base font-normal font-['Inter'] leading-normal">Secure isolated grids and remote pipelines</div>
+        <div class="self-stretch inline-flex justify-start items-center gap-2">
+            <div class="justify-start text-white text-base font-normal font-['Inter'] leading-normal">Learn More</div>
+            <div class="w-6 h-6 relative overflow-hidden">
+                <div class="w-2.5 h-2.5 left-[7px] top-[7px] absolute outline outline-2 outline-offset-[-1px] outline-white"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div data-property-1="Variant7" class="self-stretch p-6 bg-black/90 inline-flex flex-col justify-start items-start gap-6">
+    <div class="self-stretch inline-flex justify-start items-center gap-6">
+        <div class="w-12 h-12 bg-white/25 rounded-full"></div>
+        <div class="justify-start text-white text-xl font-semibold font-['Inter'] leading-loose">Manufacturing</div>
+    </div>
+    <div class="self-stretch flex flex-col justify-start items-start gap-6">
+        <div class="self-stretch justify-start text-white text-base font-normal font-['Inter'] leading-normal">Protect PLCs, SCADA, and connected factory assets</div>
+        <div class="self-stretch inline-flex justify-start items-center gap-2">
+            <div class="justify-start text-white text-base font-normal font-['Inter'] leading-normal">Learn More</div>
+            <div class="w-6 h-6 relative overflow-hidden">
+                <div class="w-2.5 h-2.5 left-[7px] top-[7px] absolute outline outline-2 outline-offset-[-1px] outline-white"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div data-property-1="Variant7" class="self-stretch p-6 bg-black/90 inline-flex flex-col justify-start items-start gap-6">
+    <div class="self-stretch inline-flex justify-start items-center gap-6">
+        <div class="w-12 h-12 bg-white/25 rounded-full"></div>
+        <div class="justify-start text-white text-xl font-semibold font-['Inter'] leading-loose">Utilities</div>
+    </div>
+    <div class="self-stretch flex flex-col justify-start items-start gap-6">
+        <div class="self-stretch justify-start text-white text-base font-normal font-['Inter'] leading-normal">Ensure security and compliance for essential infrastructure</div>
+        <div class="self-stretch inline-flex justify-start items-center gap-2">
+            <div class="justify-start text-white text-base font-normal font-['Inter'] leading-normal">Learn More</div>
+            <div class="w-6 h-6 relative overflow-hidden">
+                <div class="w-2.5 h-2.5 left-[7px] top-[7px] absolute outline outline-2 outline-offset-[-1px] outline-white"></div>
+            </div>
+        </div>
+    </div>
+</div>
