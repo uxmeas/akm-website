@@ -1,0 +1,33 @@
+# rREADY TO SECURE SECTION
+
+<div class="self-stretch inline-flex flex-col justify-start items-start gap-8">
+    <div class="self-stretch justify-start text-white text-5xl font-bold font-['Inter'] leading-[72px]">Ready to Secure Your    OT Future?  </div>
+</div>
+FFFFFF; // 
+// Ready to Secure Your  OT Future?  
+text-white
+text-5xl
+font-bold
+font-['Inter']
+leading-[72px]
+
+<div class="self-stretch justify-start text-white/90 text-2xl font-normal font-['Inter'] leading-9">AKM was created by engineers who saw how traditional security models were failing the systems that matter most — not laptops or apps, but power grids, pipelines, satellites, and hospital devices.</div>
+// AKM was created by engineers who saw how traditional security models were failing the systems that matter most — not laptops or apps, but power grids, pipelines, satellites, and hospital devices.
+text-white/90
+text-2xl
+font-normal
+font-['Inter']
+leading-9
+
+<div class="h-16 px-6 outline outline-[3px] outline-offset-[-3px] outline-white inline-flex justify-center items-center gap-2">
+    <div class="justify-start text-white text-xl font-semibold font-['Inter'] leading-loose">Request a Demo</div>
+    <div class="w-6 h-6 relative overflow-hidden">
+        <div class="w-2.5 h-2.5 left-[7px] top-[7px] absolute outline outline-2 outline-offset-[-1px] outline-white"></div>
+    </div>
+</div>
+// Request a Demo
+text-white
+text-xl
+font-semibold
+font-['Inter']
+leading-loose
