@@ -626,17 +626,7 @@ img {
   position: relative;
 }
 
-.built-for-the-future-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 96px 64px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 96px;
-  width: 99.93060374739764%;
-}
+
 
 .built-for-the-future-row-1 {
   display: flex;
@@ -782,7 +772,9 @@ img {
   padding: 0px;
   flex-grow: 0;
   flex-shrink: 1;
-  width: 91.11111111111111%;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .built-for-the-future-card {
@@ -795,7 +787,6 @@ img {
   align-items: flex-start;
   gap: 24px;
   flex: 1;
-  width: 23.628048780487802%;
   min-height: 200px;
   transition: all 0.3s ease;
 }
@@ -857,10 +848,7 @@ img {
     padding: 3rem 0;
   }
   
-  .built-for-the-future-container {
-    padding: 48px 24px;
-    gap: 48px;
-  }
+
   
   .built-for-the-future-row-1 {
     flex-direction: column;
@@ -992,34 +980,24 @@ img {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 100%);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 100%);
   z-index: 2;
 }
 
-.future-of-ot-security-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 96px 64px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 96px;
-  width: 99.93060374739764%;
-  position: relative;
-  z-index: 3;
-}
+
 
 .future-of-ot-security-content {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 48px;
+  gap: 64px;
   padding: 0px;
   flex-grow: 0;
   flex-shrink: 1;
-  width: 91.11111111111111%;
+  width: 100%;
+  position: relative;
+  z-index: 3;
 }
 
 .future-of-ot-security-text {
@@ -1042,6 +1020,7 @@ img {
   line-height: 48px;
   color: var(--text-white);
   margin: 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .future-of-ot-security-title {
@@ -1051,6 +1030,7 @@ img {
   line-height: 72px;
   color: var(--text-white);
   margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .future-of-ot-security-description {
@@ -1060,7 +1040,7 @@ img {
   line-height: 1.5;
   color: var(--text-white);
   margin: 0;
-  opacity: 0.9;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .future-of-ot-security-highlight {
@@ -1073,6 +1053,7 @@ img {
   font-size: 32px;
   line-height: 48px;
   color: var(--text-white);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .future-of-ot-security-highlight-normal {
@@ -1081,6 +1062,7 @@ img {
   font-size: 32px;
   line-height: 48px;
   color: var(--text-white);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 
@@ -1094,7 +1076,11 @@ img {
   padding: 0px;
   flex-grow: 0;
   flex-shrink: 1;
-  width: 91.11111111111111%;
+  width: 100%;
+  max-width: 1440px;
+  margin: 64px auto 0 auto;
+  position: relative;
+  z-index: 3;
 }
 
 .future-of-ot-security-card {
@@ -1107,7 +1093,6 @@ img {
   align-items: flex-start;
   gap: 24px;
   flex: 1;
-  width: 23.628048780487802%;
   min-height: 200px;
   transition: all 0.3s ease;
 }
@@ -1168,14 +1153,11 @@ img {
     padding: 3rem 0;
   }
   
-  .future-of-ot-security-container {
-    padding: 48px 24px;
-    gap: 48px;
-  }
+
   
   .future-of-ot-security-content {
     flex-direction: column;
-    gap: 32px;
+    gap: 48px;
     width: 100%;
   }
   
@@ -1214,6 +1196,8 @@ img {
     flex-direction: column;
     gap: 16px;
     width: 100%;
+    max-width: 1440px;
+    margin: 48px auto 0 auto;
   }
   
   .future-of-ot-security-card {
@@ -1254,17 +1238,7 @@ img {
   position: relative;
 }
 
-.how-we-solve-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 96px 64px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 96px;
-  width: 99.93060374739764%;
-}
+
 
 .how-we-solve-content {
   display: flex;
@@ -1503,10 +1477,7 @@ img {
     padding: 3rem 0;
   }
   
-  .how-we-solve-container {
-    padding: 48px 24px;
-    gap: 48px;
-  }
+
   
   .how-we-solve-content {
     flex-direction: column;
@@ -1619,17 +1590,7 @@ img {
   position: relative;
 }
 
-.industries-we-serve-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 96px 64px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 64px;
-  width: 99.93060374739764%;
-}
+
 
 .industries-we-serve-header {
   text-align: left;
@@ -1681,6 +1642,8 @@ img {
   flex-grow: 0;
   flex-shrink: 1;
   width: 100%;
+  max-width: 1440px;
+  margin: 64px auto 0 auto;
 }
 
 .industry-card {
@@ -1751,7 +1714,7 @@ img {
 
 
 .industries-we-serve-cta {
-  margin-top: 32px;
+  margin-top: 24px;
 }
 
 .industries-cta-button {
@@ -1808,10 +1771,7 @@ img {
     padding: 3rem 0;
   }
   
-  .industries-we-serve-container {
-    padding: 48px 24px;
-    gap: 48px;
-  }
+
   
   .industries-we-serve-title {
     font-size: 32px;
@@ -1910,17 +1870,7 @@ img {
   align-items: center;
 }
 
-.final-cta-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 96px 64px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 64px;
-  width: 100%;
-}
+
 
 .final-cta-content {
   display: flex;
@@ -2008,10 +1958,7 @@ img {
     padding: 4rem 0;
   }
   
-  .final-cta-container {
-    padding: 48px 24px;
-    gap: 32px;
-  }
+
   
   .final-cta-content {
     flex-direction: column;
@@ -2056,16 +2003,10 @@ img {
   background-color: var(--color-black);
   color: var(--text-white);
   width: 100%;
+  padding: 96px 0;
 }
 
-.footer-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 96px 64px;
-  display: flex;
-  flex-direction: column;
-  gap: 96px;
-}
+
 
 .footer-content {
   display: flex;
@@ -2173,15 +2114,14 @@ img {
 
 /* Responsive Footer */
 @media (max-width: 1440px) {
-  .footer-container {
-    padding: 96px 24px;
+  .footer-section {
+    padding: 96px 0;
   }
 }
 
 @media (max-width: 768px) {
-  .footer-container {
-    padding: 64px 16px;
-    gap: 48px;
+  .footer-section {
+    padding: 64px 0;
   }
   
   .footer-content {

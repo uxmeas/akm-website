@@ -84,7 +84,7 @@ img {
 /* Container */
 .container {
     width: 100%;
-    max-width: 1400px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 0 var(--space-md);
 }
@@ -122,8 +122,8 @@ img {
 
 /* Mobile First - Base styles are for mobile */
 
-/* Tablet (768px and up) */
-@media (min-width: 768px) {
+/* Mobile (375px and up) */
+@media (min-width: 375px) {
     .container {
         padding: 0 var(--space-lg);
     }
@@ -133,8 +133,8 @@ img {
     }
 }
 
-/* Desktop (1024px and up) */
-@media (min-width: 1024px) {
+/* Tablet (834px and up) */
+@media (min-width: 834px) {
     .container {
         padding: 0 var(--space-xl);
     }
@@ -144,8 +144,8 @@ img {
     }
 }
 
-/* Large Desktop (1280px and up) */
-@media (min-width: 1280px) {
+/* Desktop (1440px and up) */
+@media (min-width: 1440px) {
     .container {
         padding: 0 var(--space-2xl);
     }
