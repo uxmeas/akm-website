@@ -30,16 +30,47 @@
 <div class="nav-logo">
 <img src="assets/akmlogo-white.png" alt="AKM SecureKey Logo" class="logo-image">
 </div>
-<div class="menu-5">
+<div class="menu-5 desktop-menu">
 <p class="text-6"><span class="text-white">Home</span></p>
 <p class="text-7"><span class="text-white">About</span></p>
 <p class="text-8"><span class="text-white">Solutions</span></p>
 <p class="text-9"><span class="text-white">Industries</span></p>
 </div>
 </div>
-<div class="contact-10">
+<div class="contact-10 desktop-contact">
 <p class="text-11"><span class="text-white">Contact</span></p>
 <i data-lucide="arrow-up-right" class="contact-icon"></i>
+</div>
+<div class="mobile-menu-toggle">
+<button class="hamburger-button" id="mobile-menu-toggle">
+<i data-lucide="menu" class="hamburger-icon"></i>
+</button>
+</div>
+</div>
+</div>
+
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu-overlay" id="mobile-menu-overlay">
+<div class="mobile-menu-content">
+<div class="mobile-menu-header">
+<div class="nav-logo">
+<img src="assets/akmlogo-white.png" alt="AKM SecureKey Logo" class="logo-image">
+</div>
+<button class="close-menu-button" id="close-menu-button">
+<i data-lucide="x" class="close-icon"></i>
+</button>
+</div>
+<div class="mobile-menu-items">
+<p class="mobile-menu-item"><span class="text-white">Home</span></p>
+<p class="mobile-menu-item"><span class="text-white">About</span></p>
+<p class="mobile-menu-item"><span class="text-white">Solutions</span></p>
+<p class="mobile-menu-item"><span class="text-white">Industries</span></p>
+</div>
+<div class="mobile-menu-cta">
+<button class="mobile-contact-button">
+<span class="text-white">Contact</span>
+<i data-lucide="arrow-up-right" class="contact-icon"></i>
+</button>
 </div>
 </div>
 </div>
@@ -76,6 +107,73 @@
 </div>
 </div>
 
+<!-- Built for the Future Section -->
+<section class="built-for-the-future-section">
+  <div class="built-for-the-future-container">
+    <div class="built-for-the-future-row-1">
+      <div class="built-for-the-future-column">
+        <div class="built-for-the-future-text">
+          <h2 class="built-for-the-future-title">Built for the Future of<br>OT Security</h2>
+          <p class="built-for-the-future-subtitle">AKM isn't just a better product. It's a better philosophy:</p>
+          <p class="built-for-the-future-philosophy">Trust nothing. Automate everything.<br>Secure by design.</p>
+        </div>
+        <div class="built-for-the-future-cta">
+          <button class="built-for-the-future-button">
+            <span class="built-for-the-future-button-text">Request a Demo</span>
+            <i data-lucide="arrow-up-right" class="built-for-the-future-button-icon"></i>
+          </button>
+        </div>
+      </div>
+      
+      <div class="built-for-the-future-image">
+        <img src="design/assets/built-for-the-future.png" alt="AKM SecureKey Technology" class="built-for-the-future-img">
+      </div>
+    </div>
+    
+    <div class="built-for-the-future-row-2">
+      <div class="built-for-the-future-card">
+        <div class="built-for-the-future-card-icon">
+          <i data-lucide="shield-check" class="built-for-the-future-icon"></i>
+        </div>
+        <div class="built-for-the-future-card-content">
+          <h3 class="built-for-the-future-card-title">Patent-Backed Security</h3>
+          <p class="built-for-the-future-card-description">Four patents power our unique approach to autonomous key management</p>
+        </div>
+      </div>
+      
+      <div class="built-for-the-future-card">
+        <div class="built-for-the-future-card-icon">
+          <i data-lucide="code" class="built-for-the-future-icon"></i>
+        </div>
+        <div class="built-for-the-future-card-content">
+          <h3 class="built-for-the-future-card-title">High-Performance Codebase</h3>
+          <p class="built-for-the-future-card-description">C-based, modular components under 10KB — optimized for embedded and air-gapped systems</p>
+        </div>
+      </div>
+      
+      <div class="built-for-the-future-card">
+        <div class="built-for-the-future-card-icon">
+          <i data-lucide="settings" class="built-for-the-future-icon"></i>
+        </div>
+        <div class="built-for-the-future-card-content">
+          <h3 class="built-for-the-future-card-title">One-Time Setup</h3>
+          <p class="built-for-the-future-card-description">Fully autonomous and self-healing, with no ongoing human oversight</p>
+        </div>
+      </div>
+      
+      <div class="built-for-the-future-card">
+        <div class="built-for-the-future-card-icon">
+          <i data-lucide="check-circle" class="built-for-the-future-icon"></i>
+        </div>
+        <div class="built-for-the-future-card-content">
+          <h3 class="built-for-the-future-card-title">Compliance Ready</h3>
+          <p class="built-for-the-future-card-description">Aligned with EU and global cybersecurity mandates like IEC 62443 and NIS2</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Bootstrap 5 JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -91,6 +189,44 @@
 <script>
   // Initialize Lucide icons
   lucide.createIcons();
+</script>
+
+<!-- Mobile Menu JavaScript -->
+<script>
+  // Mobile Menu Functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+    const closeMenuButton = document.getElementById('close-menu-button');
+    
+    // Open mobile menu
+    mobileMenuToggle.addEventListener('click', function() {
+      mobileMenuOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    });
+    
+    // Close mobile menu
+    function closeMobileMenu() {
+      mobileMenuOverlay.classList.remove('active');
+      document.body.style.overflow = ''; // Restore scrolling
+    }
+    
+    closeMenuButton.addEventListener('click', closeMobileMenu);
+    
+    // Close menu when clicking outside
+    mobileMenuOverlay.addEventListener('click', function(e) {
+      if (e.target === mobileMenuOverlay) {
+        closeMobileMenu();
+      }
+    });
+    
+    // Close menu on escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && mobileMenuOverlay.classList.contains('active')) {
+        closeMobileMenu();
+      }
+    });
+  });
 </script>
 </body>
 </html>
