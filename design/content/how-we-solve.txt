@@ -1,0 +1,184 @@
+# HOW WE SOLVE SECTION
+
+<div class="self-stretch justify-start text-zinc-900 text-3xl font-normal font-['Inter'] leading-[48px]">How We Solve The Challenge</div>
+// How We Solve The Challenge
+text-zinc-900
+text-3xl
+font-normal
+font-['Inter']
+leading-[48px]
+
+<div class="self-stretch justify-start text-zinc-900 text-5xl font-bold font-['Inter'] leading-[72px]">OT Cybersecurity <br/>Is Broken</div>
+171A1F; // 
+// OT Cybersecurity <br/>Is Broken
+text-zinc-900
+text-5xl
+font-bold
+font-['Inter']
+leading-[72px]
+
+<div class="self-stretch justify-start"><span class="text-zinc-900 text-2xl font-normal font-['Inter'] leading-9">Industrial systems are under siege. Attacks are increasing 30% year over year, causing more than <br/></span><span class="text-zinc-900 text-2xl font-bold font-['Inter'] leading-9">$10 billion</span><span class="text-zinc-900 text-2xl font-normal font-['Inter'] leading-9"> in annual damage. And yet, most cybersecurity solutions still rely on outdated Public Key Infrastructure (PKI) — too complex, too manual, and completely unusable in air-gapped or resource-constrained environments.</span></div>
+// Industrial systems are under siege. Attacks are increasing 30% year over year, causing more than <br/>
+text-zinc-900
+text-2xl
+font-normal
+font-['Inter']
+leading-9
+---
+// $10 billion
+text-zinc-900
+text-2xl
+font-bold
+font-['Inter']
+leading-9
+---
+//  in annual damage. And yet, most cybersecurity solutions still rely on outdated Public Key Infrastructure (PKI) — too complex, too manual, and completely unusable in air-gapped or resource-constrained environments.
+text-zinc-900
+text-2xl
+font-normal
+font-['Inter']
+leading-9
+
+<div class="self-stretch justify-start"><span class="text-zinc-900 text-2xl font-normal font-['Inter'] leading-9">As regulators demand </span><span class="text-zinc-900 text-2xl font-bold font-['Inter'] leading-9">security by design</span><span class="text-zinc-900 text-2xl font-normal font-['Inter'] leading-9">, organizations are stuck choosing between fragile legacy tools or risky cloud dependence.</span></div>
+// As regulators demand 
+text-zinc-900
+text-2xl
+font-normal
+font-['Inter']
+leading-9
+---
+// security by design
+text-zinc-900
+text-2xl
+font-bold
+font-['Inter']
+leading-9
+---
+// , organizations are stuck choosing between fragile legacy tools or risky cloud dependence.
+text-zinc-900
+text-2xl
+font-normal
+font-['Inter']
+leading-9
+
+<div data-property-1="Variant6" class="self-stretch p-8 bg-white inline-flex flex-col justify-start items-start gap-6">
+    <div class="self-stretch inline-flex justify-start items-center gap-6">
+        <div class="w-12 h-12 bg-black/25 rounded-full"></div>
+        <div class="flex-1 justify-start text-zinc-900 text-xl font-semibold font-['Inter'] leading-loose">Solution #1</div>
+    </div>
+    <div class="self-stretch flex flex-col justify-start items-start gap-6">
+        <div class="self-stretch flex flex-col justify-start items-start gap-2">
+            <div class="self-stretch justify-start text-zinc-900 text-3xl font-semibold font-['Inter'] leading-[48px]">Unbreakable Key Protection for Air-Gapped ICS</div>
+            <div class="self-stretch justify-start text-zinc-900 text-base font-normal font-['Inter'] leading-normal">Secure disconnected OT environments with AKM SecureKey. Generate, distribute, and rotate encryption keys entirely offline — ensuring critical infrastructure is        never exposed.</div>
+            <div class="self-stretch justify-start"><span class="text-zinc-900 text-base font-bold font-['Inter'] leading-normal">Benefit: </span><span class="text-zinc-900 text-base font-normal font-['Inter'] leading-normal">Fortifies systems where cloud-dependent security solutions can’t operate.</span></div>
+            <div class="self-stretch justify-start"><span class="text-zinc-900 text-base font-bold font-['Inter'] leading-normal">Use Case: </span><span class="text-zinc-900 text-base font-normal font-['Inter'] leading-normal">Protects SCADA systems in oil refineries from cyber intrusions.</span></div>
+        </div>
+        <div class="self-stretch inline-flex justify-start items-center gap-2">
+            <div class="justify-start text-zinc-900 text-base font-normal font-['Inter'] leading-normal">h6. Bootstrap heading</div>
+            <div class="w-6 h-6 relative overflow-hidden">
+                <div class="w-2.5 h-2.5 left-[7px] top-[7px] absolute outline outline-2 outline-offset-[-1px] outline-black"></div>
+            </div>
+        </div>
+    </div>
+</div>
+000000; // 
+000000; // 
+171A1F; // 
+FFFFFF; // 
+// Solution #1
+text-zinc-900
+text-xl
+font-semibold
+font-['Inter']
+leading-loose
+---
+// Unbreakable Key Protection for Air-Gapped ICS
+text-zinc-900
+text-3xl
+font-semibold
+font-['Inter']
+leading-[48px]
+---
+// Secure disconnected OT environments with AKM SecureKey. Generate, distribute, and rotate encryption keys entirely offline — ensuring critical infrastructure is  never exposed.
+text-zinc-900
+text-base
+font-normal
+font-['Inter']
+leading-normal
+---
+// Benefit: 
+text-zinc-900
+text-base
+font-bold
+font-['Inter']
+leading-normal
+---
+// Fortifies systems where cloud-dependent security solutions can’t operate.
+text-zinc-900
+text-base
+font-normal
+font-['Inter']
+leading-normal
+---
+// Use Case: 
+text-zinc-900
+text-base
+font-bold
+font-['Inter']
+leading-normal
+---
+// Protects SCADA systems in oil refineries from cyber intrusions.
+text-zinc-900
+text-base
+font-normal
+font-['Inter']
+leading-normal
+---
+// h6. Bootstrap heading
+text-zinc-900
+text-base
+font-normal
+font-['Inter']
+leading-normal
+
+<div data-property-1="Variant6" class="self-stretch p-8 bg-white inline-flex flex-col justify-start items-start gap-6">
+    <div class="self-stretch inline-flex justify-start items-center gap-6">
+        <div class="w-12 h-12 bg-black/25 rounded-full"></div>
+        <div class="flex-1 justify-start text-zinc-900 text-xl font-semibold font-['Inter'] leading-loose">Solution #2</div>
+    </div>
+    <div class="self-stretch flex flex-col justify-start items-start gap-6">
+        <div class="self-stretch flex flex-col justify-start items-start gap-2">
+            <div class="self-stretch justify-start text-zinc-900 text-3xl font-semibold font-['Inter'] leading-[48px]">Streamlined Compliance for        OT Key Management</div>
+            <div class="self-stretch justify-start text-zinc-900 text-base font-normal font-['Inter'] leading-normal">Simplify compliance and reduce manual overhead. AKM SecureKey automates provisioning, renewal, and revocation of keys across OT devices — helping meet global standards.</div>
+            <div class="self-stretch justify-start"><span class="text-zinc-900 text-base font-bold font-['Inter'] leading-normal">Benefit: </span><span class="text-zinc-900 text-base font-normal font-['Inter'] leading-normal">Saves time and ensures audit-ready operations.</span></div>
+            <div class="self-stretch justify-start"><span class="text-zinc-900 text-base font-bold font-['Inter'] leading-normal">Use Case: </span><span class="text-zinc-900 text-base font-normal font-['Inter'] leading-normal">Streamlines the key lifecycle for a factory’s 1,000+ IoT devices.</span></div>
+        </div>
+        <div class="self-stretch inline-flex justify-start items-center gap-2">
+            <div class="justify-start text-zinc-900 text-base font-normal font-['Inter'] leading-normal">h6. Bootstrap heading</div>
+            <div class="w-6 h-6 relative overflow-hidden">
+                <div class="w-2.5 h-2.5 left-[7px] top-[7px] absolute outline outline-2 outline-offset-[-1px] outline-black"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div data-property-1="Variant6" class="self-stretch p-8 bg-white inline-flex flex-col justify-start items-start gap-6">
+    <div class="self-stretch inline-flex justify-start items-center gap-6">
+        <div class="w-12 h-12 bg-black/25 rounded-full"></div>
+        <div class="flex-1 justify-start text-zinc-900 text-xl font-semibold font-['Inter'] leading-loose">Solution #3</div>
+    </div>
+    <div class="self-stretch flex flex-col justify-start items-start gap-6">
+        <div class="self-stretch flex flex-col justify-start items-start gap-2">
+            <div class="self-stretch justify-start text-zinc-900 text-3xl font-semibold font-['Inter'] leading-[48px]">Seamless Key Management for Any OT Platform</div>
+            <div class="self-stretch justify-start text-zinc-900 text-base font-normal font-['Inter'] leading-normal">Scale securely across your infrastructure. Our modular, API-driven solution integrates into any OT stack — with minimal processing overhead and no PKI complexity.</div>
+            <div class="self-stretch justify-start"><span class="text-zinc-900 text-base font-bold font-['Inter'] leading-normal">Benefit: </span><span class="text-zinc-900 text-base font-normal font-['Inter'] leading-normal">Enhances your existing security posture        without disruption.</span></div>
+            <div class="self-stretch justify-start"><span class="text-zinc-900 text-base font-bold font-['Inter'] leading-normal">Use Case: </span><span class="text-zinc-900 text-base font-normal font-['Inter'] leading-normal">Embeds key management into a hospital’s IoT medical device network.</span></div>
+        </div>
+        <div class="self-stretch inline-flex justify-start items-center gap-2">
+            <div class="justify-start text-zinc-900 text-base font-normal font-['Inter'] leading-normal">h6. Bootstrap heading</div>
+            <div class="w-6 h-6 relative overflow-hidden">
+                <div class="w-2.5 h-2.5 left-[7px] top-[7px] absolute outline outline-2 outline-offset-[-1px] outline-black"></div>
+            </div>
+        </div>
+    </div>
+</div>
