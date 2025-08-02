@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Implementation Examples</title>
+</head>
+<body>
+    <h1>Responsive Image Implementation Examples for AKM SecureKey</h1>
+    
+    <h2>1. Hero Section Background (CSS)</h2>
+    <pre><code>
+/* Current */
+.hero-section {
+    background-image: url('assets/optimized/hero-banner-large.jpg');
+}
+
+/* Optimized with responsive images */
+.hero-section {
+    background-image: url('assets/optimized/hero-banner-mobile.jpg');
+}
+
+@media (min-width: 640px) {
+    .hero-section {
+        background-image: url('assets/optimized/hero-banner-small.jpg');
+    }
+}
+
+@media (min-width: 1280px) {
+    .hero-section {
+        background-image: url('assets/optimized/hero-banner-medium.jpg');
+    }
+}
+
+@media (min-width: 1920px) {
+    .hero-section {
+        background-image: url('assets/optimized/hero-banner-large.jpg');
+    }
+}
+
+/* With WebP support detection */
+.webp .hero-section {
+    background-image: url('assets/optimized/hero-banner-mobile.webp');
+}
+    </code></pre>
+
+    <h2>2. Industry Card Images</h2>
+    <pre><code>
+<!-- Current -->
+&lt;img src="assets/industries/industries-energy.png" alt="Energy Industry" class="w-full h-48 object-cover"&gt;
+
+<!-- Optimized -->
+&lt;picture&gt;
+    &lt;source type="image/webp" 
+            srcset="assets/optimized/industries-energy-small.webp 640w,
+                    assets/optimized/industries-energy-medium.webp 1280w,
+                    assets/optimized/industries-energy-large.webp 1920w"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"&gt;
+    &lt;img src="assets/optimized/industries-energy-large.jpg" 
+         alt="Energy Industry"
+         class="w-full h-48 object-cover"
+         srcset="assets/optimized/industries-energy-small.jpg 640w,
+                 assets/optimized/industries-energy-medium.jpg 1280w,
+                 assets/optimized/industries-energy-large.jpg 1920w"
+         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+         loading="lazy"&gt;
+&lt;/picture&gt;
+    </code></pre>
+
+    <h2>3. Industry Photo Images</h2>
+    <pre><code>
+<!-- Current -->
+&lt;img src="assets/industries/industries-energy-photo.png" alt="Energy Industry Operations" class="w-full h-full object-cover shadow-lg"&gt;
+
+<!-- Optimized (these are already small, just convert format) -->
+&lt;picture&gt;
+    &lt;source type="image/webp" srcset="assets/optimized/industries-energy-photo.webp"&gt;
+    &lt;img src="assets/optimized/industries-energy-photo.jpg" 
+         alt="Energy Industry Operations" 
+         class="w-full h-full object-cover shadow-lg"
+         loading="lazy"&gt;
+&lt;/picture&gt;
+    </code></pre>
+
+    <h2>4. Logo (Remove Duplicate)</h2>
+    <pre><code>
+<!-- Update all references from -->
+&lt;img src="assets/logos/akmlogo-white.png" ...&gt;
+
+<!-- To -->
+&lt;img src="assets/akmlogo-white.png" ...&gt;
+    </code></pre>
+
+    <h2>5. Add WebP Detection Script</h2>
+    <pre><code>
+&lt;script&gt;
+// Add to the head of your HTML
+function checkWebP(callback) {
+    var webP = new Image();
+    webP.onload = webP.onerror = function () {
+        callback(webP.height == 2);
+    };
+    webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
+}
+
+checkWebP(function(support) {
+    if(support) {
+        document.documentElement.classList.add('webp');
+    } else {
+        document.documentElement.classList.add('no-webp');
+    }
+});
+&lt;/script&gt;
+    </code></pre>
+
+    <h2>Implementation Steps</h2>
+    <ol>
+        <li>Run image optimization script to create optimized versions</li>
+        <li>Update CSS background images with media queries</li>
+        <li>Replace &lt;img&gt; tags with &lt;picture&gt; elements</li>
+        <li>Add loading="lazy" to images below the fold</li>
+        <li>Remove duplicate logo file and update references</li>
+        <li>Test on various devices and browsers</li>
+    </ol>
+
+    <h2>Benefits</h2>
+    <ul>
+        <li>70-80% reduction in image file sizes</li>
+        <li>Faster page load times, especially on mobile</li>
+        <li>Better user experience with appropriate image sizes</li>
+        <li>Reduced bandwidth usage</li>
+        <li>Improved SEO and Core Web Vitals scores</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Preconnect to external domains for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About AKM SecureKey - Leading OT Security Innovation</title>
+    <meta name="description" content="Learn about AKM SecureKey's mission to secure critical infrastructure with quantum-resilient technology. Meet our leadership team and discover our cybersecurity expertise.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Pure Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            safelist: [
+                'z-10', 'z-[15]', 'z-[20]', 'z-30', 'z-40', 'z-50', 'z-[999]',
+                'active', 'hidden', 'block', 'flex',
+                'translate-x-0', '-translate-x-full',
+                'opacity-0', 'opacity-100',
+                'invisible', 'visible',
+                'rotate-45', 'rotate-0'
+            ],
+            theme: {
+                extend: {
+                    colors: {
+                        'akm-black': '#000000',
+                        'akm-white': '#ffffff',
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Background overlay gradient */
+        .bg-gradient-overlay::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1));
+            z-index: 10;
+        }
+        
+        /* Component styles */
+            .nav-link::after {
+                content: '';
+                position: absolute;
+                bottom: -4px;
+                left: 50%;
+                width: 0;
+                height: 2px;
+                background: white;
+                transition: all 0.3s ease;
+                transform: translateX(-50%);
+            }
+            
+            .nav-link:hover::after {
+                width: 100%;
+            }
+            
+            .mobile-menu-overlay {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+            
+            .mobile-menu-overlay.active {
+                transform: translateX(0);
+            }
+            
+            /* Custom sub-hero section styling */
+            .sub-hero-section {
+                padding-top: 144px !important; /* 80px nav height + 64px spacing */
+                padding-bottom: 64px !important;
+                min-height: 30vh;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                overflow: hidden;
+            }
+            
+            /* Content-responsive height adjustment */
+            .sub-hero-section.content-responsive {
+                min-height: auto;
+                height: auto;
+            }
+            
+            /* Responsive height adjustments */
+            @media (min-width: 768px) {
+                .sub-hero-section {
+                    min-height: 35vh;
+                }
+            }
+            
+            @media (min-width: 1024px) {
+                .sub-hero-section {
+                    min-height: 40vh;
+                }
+            }
+            
+            .sub-hero-section::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1));
+                z-index: 10;
+            }
+            
+            .sub-hero-content {
+                position: relative;
+                z-index: 20;
+                max-width: none;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            
+            @media (min-width: 1024px) {
+                .sub-hero-content {
+                    padding-left: 2rem;
+                    padding-right: 2rem;
+                }
+            }
+        }
+        /* Button icon fix */
+        button i, a i {
+            pointer-events: none;
+            display: inline-block;
+        }
+        
+        /* Ensure dropdowns work on hover */
+        .group:hover .group-hover\:opacity-100 {
+            opacity: 1 !important;
+        }
+        
+        .group:hover .group-hover\:visible {
+            visibility: visible !important;
+        }
+        
+        /* Fix mobile menu positioning */
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* Ensure video displays properly */
+        .hero-video {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* Modal content styling */
+        #modalContent p:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* Team card animations */
+        .team-card {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+        
+        .team-card:nth-child(1) { animation-delay: 0.1s; }
+        .team-card:nth-child(2) { animation-delay: 0.2s; }
+        .team-card:nth-child(3) { animation-delay: 0.3s; }
+        .team-card:nth-child(4) { animation-delay: 0.4s; }
+        .team-card:nth-child(5) { animation-delay: 0.5s; }
+        .team-card:nth-child(6) { animation-delay: 0.6s; }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="font-inter">
+        <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="mainNav">
+        <div class="bg-black/25 backdrop-blur-md border-b-2 border-white transition-all duration-300" id="navContainer">
+            <div class="max-w-none mx-auto px-4 lg:px-8">
+                <div class="flex items-center h-20">
+                    <!-- Logo -->
+                    <a href="index.html" class="flex items-center">
+                        <img src="assets/akmlogo-white.png" width="160" height="40" alt="AKM SecureKey Logo" class="h-10">
+                    </a>
+                    
+                    <!-- Desktop Navigation -->
+                    <div class="hidden lg:flex items-center space-x-6 ml-12">
+                        <a href="index.html" class="nav-link relative text-white font-medium px-4 py-2 transition-all duration-300">Home</a>
+                        <a href="about.html" class="nav-link relative text-white font-medium px-4 py-2 transition-all duration-300">About</a>
+                        
+                        <!-- Solutions Dropdown -->
+                        <div class="relative group">
+                            <button class="nav-link relative text-white font-medium px-4 py-2 transition-all duration-300 inline-flex items-center gap-1">
+                                Solutions
+                                <i data-lucide="plus" class="w-4 h-4 transition-transform group-hover:rotate-45"></i>
+                            </button>
+                            <div class="absolute top-full left-0 mt-2 w-64 bg-black/95 backdrop-blur-md border border-white/20 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                                <div class="py-3">
+                                    <a href="solutions.html" class="block px-8 py-3 text-white hover:bg-white/10 transition-colors duration-200">Overview</a>
+                                    <a href="resilient-key-protection.html" class="block px-8 py-3 text-white hover:bg-white/10 transition-colors duration-200">Resilient Key Protection</a>
+                                    <a href="seamless-integration.html" class="block px-8 py-3 text-white hover:bg-white/10 transition-colors duration-200">Seamless Integration</a>
+                                    <a href="streamlined-compliance.html" class="block px-8 py-3 text-white hover:bg-white/10 transition-colors duration-200">Streamlined Compliance</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Industries Dropdown -->
+                        <div class="relative group">
+                            <button class="nav-link relative text-white font-medium px-4 py-2 transition-all duration-300 inline-flex items-center gap-1">
+                                Industries
+                                <i data-lucide="plus" class="w-4 h-4 transition-transform group-hover:rotate-45"></i>
+                            </button>
+                            <div class="absolute top-full left-0 mt-2 w-64 bg-black/95 backdrop-blur-md border border-white/20 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                                <div class="py-3">
+                                    <a href="industries.html" class="block px-8 py-3 text-white hover:bg-white/10 transition-colors duration-200">Overview</a>
+                                    <a href="industry-aerospace-defense.html" class="block px-8 py-3 text-white hover:bg-white/10 transition-colors duration-200">Aerospace & Defense</a>
+                                    <a href="industry-chemical-processing.html" class="block px-8 py-3 text-white hover:bg-white/10 transition-colors duration-200">Chemical Processing</a>
+                                    <a href="industry-energy-oil-gas.html" class="block px-8 py-3 text-white hover:bg-white/10 transition-colors duration-200">Energy (Oil & Gas)</a>
+                                    <a href="industry-financial-services.html" class="block px-8 py-3 text-white hover:bg-white/10 transition-colors duration-200">Financial Services</a>
+                                    <a href="industry-government.html" class="block px-8 py-3 text-white hover:bg-white/10 transition-colors duration-200">Government</a>
+                                    <a href="industry-manufacturing.html" class="block px-8 py-3 text-white hover:bg-white/10 transition-colors duration-200">Manufacturing</a>
+                                    <a href="industry-mining.html" class="block px-8 py-3 text-white hover:bg-white/10 transition-colors duration-200">Mining</a>
+                                    <a href="industry-pharmaceuticals.html" class="block px-8 py-3 text-white hover:bg-white/10 transition-colors duration-200">Pharmaceuticals</a>
+                                    <a href="industry-transportation.html" class="block px-8 py-3 text-white hover:bg-white/10 transition-colors duration-200">Transportation</a>
+                                    <a href="industry-utilities.html" class="block px-8 py-3 text-white hover:bg-white/10 transition-colors duration-200">Utilities</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right side buttons -->
+                    <div class="hidden lg:flex items-center space-x-4 ml-auto">
+                        <a href="contact.html" class="ring-2 ring-white text-white px-4 py-2 font-semibold hover:bg-white hover:text-black transition-all duration-300 inline-flex items-center gap-2">
+                            Contact
+                            <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#" class="bg-white text-black px-4 py-2 font-semibold hover:bg-gray-100 transition-all duration-300 inline-flex items-center gap-2">
+                            Login
+                            <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Mobile menu button -->
+                    <button class="lg:hidden text-white ml-auto" id="mobile-menu-toggle">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay fixed inset-0 bg-black/95 z-[999] lg:hidden" id="mobile-menu-overlay">
+        <div class="p-8 h-full flex flex-col">
+            <div class="flex justify-between items-center">
+                <img src="assets/akmlogo-white.png" width="160" height="40" alt="AKM SecureKey Logo" class="h-8">
+                <button id="close-menu-button" class="text-white">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <div class="flex flex-col space-y-4 mt-8">
+                <a href="index.html" class="text-white text-xl font-medium py-2">Home</a>
+                <a href="about.html" class="text-white text-xl font-medium py-2">About</a>
+                
+                <!-- Solutions Mobile -->
+                <div class="space-y-2">
+                    <div class="text-white text-xl font-medium py-2 flex items-center justify-between">
+                        <span>Solutions</span>
+                        <i data-lucide="plus" class="w-6 h-6" id="solutions-mobile-toggle"></i>
+                    </div>
+                    <div class="hidden space-y-2 ml-4" id="solutions-mobile-menu">
+                        <a href="solutions.html" class="text-white/80 text-lg py-1 block">Overview</a>
+                        <a href="resilient-key-protection.html" class="text-white/80 text-lg py-1 block">Resilient Key Protection</a>
+                        <a href="seamless-integration.html" class="text-white/80 text-lg py-1 block">Seamless Integration</a>
+                        <a href="streamlined-compliance.html" class="text-white/80 text-lg py-1 block">Streamlined Compliance</a>
+                    </div>
+                </div>
+                
+                <!-- Industries Mobile -->
+                <div class="space-y-2">
+                    <div class="text-white text-xl font-medium py-2 flex items-center justify-between">
+                        <span>Industries</span>
+                        <i data-lucide="plus" class="w-6 h-6" id="industries-mobile-toggle"></i>
+                    </div>
+                    <div class="hidden space-y-2 ml-4" id="industries-mobile-menu">
+                        <a href="industries.html" class="text-white/80 text-lg py-1 block">Overview</a>
+                        <a href="industry-aerospace-defense.html" class="text-white/80 text-lg py-1 block">Aerospace & Defense</a>
+                        <a href="industry-chemical-processing.html" class="text-white/80 text-lg py-1 block">Chemical Processing</a>
+                        <a href="industry-energy-oil-gas.html" class="text-white/80 text-lg py-1 block">Energy (Oil & Gas)</a>
+                        <a href="industry-financial-services.html" class="text-white/80 text-lg py-1 block">Financial Services</a>
+                        <a href="industry-government.html" class="text-white/80 text-lg py-1 block">Government</a>
+                        <a href="industry-manufacturing.html" class="text-white/80 text-lg py-1 block">Manufacturing</a>
+                        <a href="industry-mining.html" class="text-white/80 text-lg py-1 block">Mining</a>
+                        <a href="industry-pharmaceuticals.html" class="text-white/80 text-lg py-1 block">Pharmaceuticals</a>
+                        <a href="industry-transportation.html" class="text-white/80 text-lg py-1 block">Transportation</a>
+                        <a href="industry-utilities.html" class="text-white/80 text-lg py-1 block">Utilities</a>
+                    </div>
+                </div>
+                
+                <a href="contact.html" class="text-white text-xl font-medium py-2">Contact</a>
+                <a href="#" class="text-white text-xl font-medium py-2">Login</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="sub-hero-section content-responsive bg-gradient-overlay" style="background-image: url('assets/sub-hero-about.png');">
+        <div class="sub-hero-content">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Left Column - Content -->
+                <div class="lg:col-span-1">
+                    <div class="text-left mb-16">
+                        <h3 class="text-2xl lg:text-3xl font-normal text-gray-300 mb-6">About</h3>
+                        <h1 class="text-4xl lg:text-5xl font-bold mb-8 text-white" style="line-height: 1.25;">AKM SecureKey</h1>
+                    </div>
+                    <p class="text-xl lg:text-2xl leading-relaxed mb-8 max-w-4xl text-white">
+                        With over a century of combined experience across mission-critical systems and advanced cryptography, the AKM Cyber Corp. leadership team has pioneered the field of quantum-resilient security. Their work spans real-time embedded systems, zero-trust architectures, secure key management, and global standards development for industrial control systems (ICS). From aerospace and defense to rail, energy, and healthcare, AKM's founders bring a deep legacy of cybersecurity innovation to the world's most sensitive environments.
+                    </p>
+                    <p class="text-xl lg:text-2xl leading-relaxed mb-8 max-w-4xl text-white">
+                        This core expertise has been honed through high-impact collaborations with organizations like Boeing, General Dynamics, Magna, Bombardier, Airbus, NSA, NASA, EASA, and the Department of Defense, and continues to shape the future of secure infrastructure worldwide.
+                    </p>
+                </div>
+                
+                <!-- Right Column - Empty -->
+                <div class="lg:col-span-1">
+                    <!-- Empty column -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="py-16 lg:py-24 bg-white">
+        <div class="max-w-none mx-auto px-4 lg:px-8">
+            <h2 class="text-4xl lg:text-5xl font-bold mb-12 text-black leading-relaxed">
+                Our Story
+            </h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                <!-- Left Column -->
+                <div>
+                    <p class="text-xl mb-6 text-gray-700">
+                        AKM was founded to solve a problem most in the cybersecurity industry have accepted as unsolvable: how to embed true Zero Trust into every transaction — without relying on legacy Public Key Infrastructure, excessive overhead, or fragile workarounds.
+                    </p>
+                    <p class="text-xl mb-6 text-gray-700">
+                        With a one-time setup, no need for external validation, and zero ongoing maintenance, AKM flips the cybersecurity model from reactive to resilient. And for environments requiring extra hardening, our low-cost hardware companion module brings added protection — with a path to further scalability via FPGA or ASIC.
+                    </p>
+                    <p class="text-xl mb-6 text-gray-700">
+                        Our founding team came together with over 100 years of combined experience across aerospace, defense, critical infrastructure, and embedded systems. We've built avionics for Airbus, security protocols for Boeing, hardened control systems for global rail networks, and contributed to international standards like IEC 62443 and CENELEC TS-50701. We saw firsthand how existing solutions — particularly PKI — fail to scale, struggle to comply, and leave even air-gapped systems vulnerable.
+                    </p>
+                    <p class="text-xl mb-6 text-gray-700 font-semibold">
+                        So we built something BETTER.
+                    </p>
+                </div>
+                
+                <!-- Right Column -->
+                <div>
+                    <p class="text-xl mb-6 text-gray-700">
+                        AKM SecureKey is a quantum-resilient cybersecurity platform that eliminates the need for traditional certificates and central authorities. It's the only software solution that fulfills all tenets of the CIA Triad — Confidentiality, Integrity, and Availability — at the frame level. Our patented architecture ensures every endpoint, every transmission, and every device is authenticated, encrypted, and secure by design. It works offline or online, in a factory, on a satellite, or under the sea.
+                    </p>
+                    <p class="text-xl mb-6 text-gray-700">
+                        Today, AKM is trusted by early adopters in energy, manufacturing, healthcare, and defense. We are shaping the future of secure systems — replacing complexity with clarity, fragility with confidence, and assumptions with proof.
+                    </p>
+                    <p class="text-xl mb-6 text-gray-700 font-semibold">
+                        This is the cybersecurity rewrite the industry has been waiting for.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Team Section -->
+    <section class="py-16 lg:py-24 bg-gray-50">
+        <div class="max-w-none mx-auto px-4 lg:px-8">
+            <div class="text-left mb-16">
+                <h3 class="text-2xl lg:text-3xl font-normal text-gray-600 mb-6">Our Team</h3>
+                <h2 class="text-4xl lg:text-5xl font-bold mb-6">The Minds Behind AKM</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="team-card bg-black text-white shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer" onclick="openProfileModal('bart-shields')">
+                    <h3 class="text-xl font-semibold mb-3 text-white">Bart Shields</h3>
+                    <p class="text-gray-300 mb-4">Founder, Chief Architect & Inventor</p>
+                    <div class="text-white font-medium inline-flex items-center gap-2">
+                        View Profile <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                    </div>
+                </div>
+                
+                <div class="team-card bg-black text-white shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer" onclick="openProfileModal('larry-butler')">
+                    <h3 class="text-xl font-semibold mb-3 text-white">Larry Butler</h3>
+                    <p class="text-gray-300 mb-4">Founder and Chief Engineer</p>
+                    <div class="text-white font-medium inline-flex items-center gap-2">
+                        View Profile <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                    </div>
+                </div>
+                
+                <div class="team-card bg-black text-white shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer" onclick="openProfileModal('brian-mcgowan')">
+                    <h3 class="text-xl font-semibold mb-3 text-white">Brian McGowan</h3>
+                    <p class="text-gray-300 mb-4">Chief Executive Officer</p>
+                    <div class="text-white font-medium inline-flex items-center gap-2">
+                        View Profile <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                    </div>
+                </div>
+                
+                <div class="team-card bg-black text-white shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer" onclick="openProfileModal('klemens-geiger')">
+                    <h3 class="text-xl font-semibold mb-3 text-white">Klemens Geiger</h3>
+                    <p class="text-gray-300 mb-4">Chief Compliance Officer</p>
+                    <div class="text-white font-medium inline-flex items-center gap-2">
+                        View Profile <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                    </div>
+                </div>
+                
+                <div class="team-card bg-black text-white shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer" onclick="openProfileModal('doug-mclean')">
+                    <h3 class="text-xl font-semibold mb-3 text-white">Doug McLean</h3>
+                    <p class="text-gray-300 mb-4">Chief Product Officer</p>
+                    <div class="text-white font-medium inline-flex items-center gap-2">
+                        View Profile <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                    </div>
+                </div>
+                
+                <div class="team-card bg-black text-white shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer" onclick="openProfileModal('chase-exon')">
+                    <h3 class="text-xl font-semibold mb-3 text-white">Chase Exon, Esq.</h3>
+                    <p class="text-gray-300 mb-4">General Counsel</p>
+                    <div class="text-white font-medium inline-flex items-center gap-2">
+                        View Profile <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 lg:py-24 bg-black text-white relative overflow-hidden">
+        <!-- Background image with gradient overlay -->
+        <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20" style="background-image: url('assets/ready-to-secure.png');"></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-black/80 via-black/50 to-transparent"></div>
+        <!-- Content overlay -->
+        <div class="relative z-10">
+        <div class="max-w-none mx-auto px-4 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl lg:text-5xl font-bold mb-6">
+                        Ready to Secure Your OT Future?
+                    </h2>
+                </div>
+                <div>
+                    <p class="text-2xl font-normal mb-8">
+                        Discover how AKM SecureKey can protect your industrial systems. Request a demo or connect with our team to explore deployment and partnership opportunities.
+                    </p>
+                    <a href="contact.html" class="bg-white text-black px-8 py-4 font-semibold hover:bg-gray-100 transition-all duration-300 inline-flex items-center gap-2">
+                        Request a Demo
+                        <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Profile Modal -->
+    <div id="profileModal" class="fixed inset-0 bg-black bg-opacity-75 z-50 hidden items-center justify-center p-0 lg:p-4">
+        <div class="bg-white w-full h-full lg:max-w-2xl lg:w-full lg:h-auto lg:max-h-[90vh] overflow-y-auto" id="profileModalContent">
+            <div class="p-6 lg:p-12">
+                <div class="flex justify-between items-start mb-8">
+                    <div>
+                        <h2 id="modalName" class="text-3xl lg:text-4xl font-bold text-black"></h2>
+                        <p id="modalTitle" class="text-xl text-gray-600 mt-2 font-medium"></p>
+                    </div>
+                    <button type="button" id="modalCloseBtn" class="text-3xl font-light text-gray-500 hover:text-black transition-colors w-10 h-10 flex items-center justify-center">
+                        ×
+                    </button>
+                </div>
+                <div id="modalContent" class="text-gray-700 space-y-6">
+                    <!-- Content will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Footer -->
+    <footer class="bg-black text-white py-16">
+        <div class="max-w-none mx-auto px-4 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+                <div>
+                    <img src="assets/akmlogo-white.png" width="160" height="40" alt="AKM SecureKey Logo" class="h-8 mb-4">
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4">
+                        <a href="index.html" class="nav-link relative text-white hover:text-gray-300">Home</a>
+                    </h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="nav-link relative text-gray-400 hover:text-white">About</a></li>
+                        <li><a href="#" class="nav-link relative text-gray-400 hover:text-white">Login</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4">
+                        <a href="solutions.html" class="nav-link relative text-white hover:text-gray-300">Solutions</a>
+                    </h3>
+                    <ul class="space-y-2">
+                        <li><a href="resilient-key-protection.html" class="nav-link relative text-gray-400 hover:text-white">Resilient Key Protection</a></li>
+                        <li><a href="seamless-integration.html" class="nav-link relative text-gray-400 hover:text-white">Seamless Integration</a></li>
+                        <li><a href="streamlined-compliance.html" class="nav-link relative text-gray-400 hover:text-white">Streamlined Compliance</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4">
+                        <a href="industries.html" class="nav-link relative text-white hover:text-gray-300">Industries</a>
+                    </h3>
+                    <ul class="space-y-2">
+                        <li><a href="industry-aerospace-defense.html" class="nav-link relative text-gray-400 hover:text-white">Aerospace & Defense</a></li>
+                        <li><a href="industry-chemical-processing.html" class="nav-link relative text-gray-400 hover:text-white">Chemical Processing</a></li>
+                        <li><a href="industry-energy-oil-gas.html" class="nav-link relative text-gray-400 hover:text-white">Energy (Oil & Gas)</a></li>
+                        <li><a href="industry-financial-services.html" class="nav-link relative text-gray-400 hover:text-white">Financial Services</a></li>
+                        <li><a href="industry-government.html" class="nav-link relative text-gray-400 hover:text-white">Government</a></li>
+                        <li><a href="industry-manufacturing.html" class="nav-link relative text-gray-400 hover:text-white">Manufacturing</a></li>
+                        <li><a href="industry-mining.html" class="nav-link relative text-gray-400 hover:text-white">Mining</a></li>
+                        <li><a href="industry-pharmaceuticals.html" class="nav-link relative text-gray-400 hover:text-white">Pharmaceuticals</a></li>
+                        <li><a href="industry-transportation.html" class="nav-link relative text-gray-400 hover:text-white">Transportation</a></li>
+                        <li><a href="industry-utilities.html" class="nav-link relative text-gray-400 hover:text-white">Utilities</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4">
+                        <a href="contact.html" class="nav-link relative text-white hover:text-gray-300">Contact</a>
+                    </h3>
+                    <ul class="space-y-2">
+                        <li><a href="mailto:info@akmcyber.com" class="nav-link relative text-gray-400 hover:text-white">info@akmcyber.com</a></li>
+                        <li class="text-gray-400 text-sm">
+                            1101 Wilson Boulevard, 6th Floor<br>
+                            Arlington, Virginia<br>
+                            22209, USA
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8">
+                <p class="text-gray-400 text-left">Copyright © 2025 AKM SecureKey</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Navigation scroll effect
+        window.addEventListener('scroll', () => {
+            const navContainer = document.getElementById('navContainer');
+            if (window.scrollY > 50) {
+                navContainer.classList.remove('bg-black/25');
+                navContainer.classList.add('bg-black/75');
+            } else {
+                navContainer.classList.remove('bg-black/75');
+                navContainer.classList.add('bg-black/25');
+            }
+        });
+        
+        // Initialize Lucide icons with delay
+        setTimeout(() => {
+            lucide.createIcons();
+        }, 100);
+        
+        // Re-initialize on dynamic content changes
+        // Debounced icon creation to prevent performance issues
+        let iconTimeout;
+        const observer = new MutationObserver(() => {
+            clearTimeout(iconTimeout);
+            iconTimeout = setTimeout(() => {
+                lucide.createIcons();
+            }, 100);
+        });
+        observer.observe(document.body, { childList: true, subtree: true });
+        
+                // Mobile menu functionality
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+        const closeMenuButton = document.getElementById('close-menu-button');
+        
+        // Mobile dropdown toggles
+        const solutionsToggle = document.getElementById('solutions-mobile-toggle');
+        const solutionsMenu = document.getElementById('solutions-mobile-menu');
+        const industriesToggle = document.getElementById('industries-mobile-toggle');
+        const industriesMenu = document.getElementById('industries-mobile-menu');
+
+        solutionsToggle.addEventListener('click', () => {
+            solutionsMenu.classList.toggle('hidden');
+            solutionsToggle.style.transform = solutionsMenu.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(45deg)';
+        });
+
+        industriesToggle.addEventListener('click', () => {
+            industriesMenu.classList.toggle('hidden');
+            industriesToggle.style.transform = industriesMenu.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(45deg)';
+        });
+        
+        mobileMenuToggle.addEventListener('click', function() {
+            mobileMenuOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        function closeMobileMenu() {
+            mobileMenuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        
+        closeMenuButton.addEventListener('click', closeMobileMenu);
+        
+        mobileMenuOverlay.addEventListener('click', function(e) {
+            if (e.target === mobileMenuOverlay) {
+                closeMobileMenu();
+            }
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && mobileMenuOverlay.classList.contains('active')) {
+                closeMobileMenu();
+            }
+        });
+
+        // Profile modal functionality
+        window.openProfileModal = function(profileId) {
+            const modal = document.getElementById('profileModal');
+            const modalName = document.getElementById('modalName');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalContent = document.getElementById('modalContent');
+            
+            const profiles = {
+                'bart-shields': {
+                    name: 'Bart Shields',
+                    title: 'Founder, Chief Architect & Inventor',
+                    content: `
+                        <p class="text-lg leading-relaxed mb-4">Bart Shields is a pioneering technologist with over two decades of experience developing quantum-resilient solutions for critical infrastructure, aerospace, defense, and industrial systems. As Founder, Chief Architect, and Inventor at AKM Cyber Corp., Bart leads the innovation behind AKM's Autonomous Key Management (AKM) system, which enables zero-knowledge authentication, cryptographic agility, and Zero Trust in every data frame.</p>
+                        <p class="text-lg leading-relaxed mb-4">Over his career, Bart has held senior engineering roles at Solectek, Datron World, Invensys Rail (now Siemens), Arynga (now Intel), and General Dynamics, where he developed embedded cybersecurity solutions and secure boot architectures for complex systems, including DoD-certified vehicles, wireless communication equipment, and avionics. He holds multiple U.S. patents for secure communications, synchronized encryption, and distributed queueing—technologies foundational to AKM's platform. His work has consistently bridged the gap between theoretical cryptography and field-deployable software, with deployments in land, sea, and aerospace domains.</p>
+                        <p class="text-lg leading-relaxed">Bart's technical scope spans C-based low-level firmware development, bootloaders, board support packages, and real-time OS integration across ARM, NIOS2, and PowerPC chipsets, to conceptualizing, designing, and overseeing development of products and product lines. At AKM, he applies this experience to develop lightweight, scalable, and quantum-resilient encryption tools that simplify compliance and eliminate PKI overhead. His mission is to empower organizations with security that is not only certifiable but operationally effortless.</p>
+                    `
+                },
+                'larry-butler': {
+                    name: 'Larry Butler',
+                    title: 'Founder and Chief Engineer',
+                    content: `
+                        <p class="text-lg leading-relaxed mb-4">Larry Butler is a veteran software engineer and systems architect with over 30 years of experience in embedded systems, secure communications, and mission-critical aerospace software. As Founder and Chief Engineer at AKM Cyber Corp., Larry plays a pivotal role in advancing the core codebase of AKM SecureKey and supporting its integration across military and industrial platforms.</p>
+                        <p class="text-lg leading-relaxed mb-4">Throughout his career, Larry has built software for real-time operating systems including VxWorks, Integrity, FreeRTOS, and Embedded Linux, contributing to systems such as the F-16 Center Pedestal Display, F-35 weapons simulation, and C-17 Heads-Up Display. His deep knowledge spans C/C++, assembly, and Ada, with development across platforms from ARM and Intel to Altera NIOS2 and PowerPC. He has also contributed to major telecom and network infrastructure projects through roles at AMCC, TelStrat, and Ascom Timeplex.</p>
+                        <p class="text-lg leading-relaxed">Larry's extensive credentials include DO-178C-certified flight software, military operational flight programs, and patented avionics display systems. His work bridges the technical depth of embedded systems with the compliance rigor of aerospace-grade cybersecurity. At AKM, Larry ensures the platform's performance, portability, and readiness for deployment in regulated and high-assurance environments.</p>
+                    `
+                },
+                'brian-mcgowan': {
+                    name: 'Brian McGowan',
+                    title: 'Chief Executive Officer',
+                    content: `
+                        <p class="text-lg leading-relaxed mb-4">Brian McGowan is a seasoned entrepreneur, operator, and venture strategist, with more than 25 years of experience launching, scaling, and advising high-growth technology companies. His background spans enterprise SaaS, applied AI, digital infrastructure, and investment platforms — making him a versatile leader at the intersection of innovation and execution. As CEO of AKM, Brian draws on deep expertise in venture building, go-to-market strategy, and product commercialization to scale AKM's groundbreaking cybersecurity solutions across global markets.</p>
+                        <p class="text-lg leading-relaxed mb-4">Brian has advised numerous venture-backed and growth-stage companies including InvestorFlow, DealCloud (Intapp, NYSE: INTA), Mercatus (State Street Alpha), Dynamo Software, Katipult Technology Corp, Syncarpha Capital, and Leverton (acquired by MRI Software). His roles have spanned board service, CRO leadership, and strategic advisory — often guiding companies through market entry, capital formation, and operational scale.</p>
+                        <p class="text-lg leading-relaxed">Previously, Brian served as CEO of Peracon, a digital real estate transaction platform that facilitated more than $300 billion in asset sales prior to its acquisition by Real Capital Markets. Brian is managing partner of BlueWave Ventures, a merchant venture development firm that has invested in, advised, and partnered with companies totaling over $1.8 billion in market capitalization. BlueWave's portfolio spans fintech, cleantech, proptech, and broader enterprise software sectors — offering a proven model for turning transformative technology into scalable commercial outcomes. He has also led CMBS intelligence initiatives, enterprise SaaS rollouts, and product launches across private and public markets.</p>
+                    `
+                },
+                'klemens-geiger': {
+                    name: 'Klemens Geiger',
+                    title: 'Chief Compliance Officer',
+                    content: `
+                        <p class="text-lg leading-relaxed mb-4">Klemens Geiger brings over 30 years of experience in cybersecurity, embedded systems, and standards development across the railway, aerospace, and industrial sectors. At AKM Cyber Corp., he leads cybersecurity compliance and system architecture, applying his deep understanding of European and global industrial standards to the AKM SecureKey platform.</p>
+                        <p class="text-lg leading-relaxed mb-4">Klemens previously served as Head of Industrial Cybersecurity at Bombardier Transportation, where he led the global Center of Competence and developed defense-in-depth strategies for ICS networks in rail vehicles. He contributed to the EN TS 50701 standard as part of the German CENELEC committee, helping define cybersecurity best practices for rail and critical infrastructure. His experience also includes leading test labs and overseeing cybersecurity for ALSTOM's DACH operations.</p>
+                        <p class="text-lg leading-relaxed mb-4">Klemens began his career developing professional audio multitrack equipment for TV, Radio, Studio Production on the international level with different platforms from 1990 until end of 2004. Achieving worldwide success by developing the first fully digital high resolution hard disc record/playback (32 Tracks) with overdubbing capability for studio production (1994). Klemens developed endless multitrack recording/playback audio server-system for the first installation with the German Parliament, Reichstag/Hauptstadt studio Berlin (1998). Related efforts include development of professional audio systems for clients such as Munich Airport and the Olympic Games.</p>
+                        <p class="text-lg leading-relaxed">Klemens then transitioned into avionics, in a variety of senior roles, where he founded and led the global Center of Competence. Managing and leading all phases of the entire engineering process in accordance with DO 178B. Thus, leading the effort to become an accepted supplier of Integrated Modular Avionics (IMA) modules based Systems by AIRBUS. As well as being nominated as a Checker within the 1020 program of AIRBUS. Klemens' contributions include contributing to certified systems on the Airbus A350 and A400M. Fluent in German and English, Klemens ensures AKM's offerings are built on globally recognized, certifiable foundations—ready for deployment in safety-critical environments worldwide.</p>
+                    `
+                },
+                'doug-mclean': {
+                    name: 'Doug McLean',
+                    title: 'Chief Product Officer',
+                    content: `
+                        <p class="text-lg leading-relaxed mb-4">Doug McLean is a veteran engineering and technology executive with over two decades of experience in software architecture, product delivery, and venture operations. As Chief Product Officer of AKM Cyber Corp., Doug leads the company's technical roadmap, product development, and IP strategy. He is known for building high-performance teams and scalable systems across fintech, blockchain, and cryptographic platforms.</p>
+                        <p class="text-lg leading-relaxed mb-4">Doug previously served as CTO at Katipult, a Canadian fintech company he helped take public in 2018 on the TSX Venture Exchange. There, he steered the company's evolution from a crowdfunding platform to a provider of enterprise software for investment banking and broker-dealer operations. Doug has also advised and served as interim CTO for Web3 and financial infrastructure startups, leveraging his expertise in cryptography, Bitcoin, Ethereum, and decentralized technologies.</p>
+                        <p class="text-lg leading-relaxed">Doug holds a Master's degree in Applied Mathematics from the University of Calgary, where he studied cryptographic research. His academic and professional background inform a systems-thinking approach that blends rigorous technical design with real-world implementation. At AKM, he drives the creation of quantum-resilient cybersecurity tools that bring breakthrough performance and operational simplicity to industrial control systems.</p>
+                    `
+                },
+                'chase-exon': {
+                    name: 'Chase Exon, Esq.',
+                    title: 'General Counsel',
+                    content: `
+                        <p class="text-lg leading-relaxed mb-4">Chase Exon is an accomplished legal and business executive with 20 years of experience advising high-growth technology companies on corporate law, M&A, and strategic operations. As General Counsel of AKM Cyber Corp., Chase provides legal oversight, risk mitigation, and deal structuring expertise, supporting the company's expansion and capital formation strategies.</p>
+                        <p class="text-lg leading-relaxed mb-4">Chase began his legal career at O'Melveny & Myers LLP, where he specialized in corporate finance, mergers and acquisitions, and emerging growth companies. He later co-founded Vantage Sports, a sports analytics startup, where he served as president, CFO, and general counsel, and led the company through its early growth. Following this, he joined Conexant Systems as General Counsel, navigating the company through its acquisition by Synaptics, and served as General Counsel and Secretary for Liberated Brands LLC, a global brand operating company whose portfolio included Volcom, Quiksilver, Billabong, RVCA, and Spyder.</p>
+                        <p class="text-lg leading-relaxed">Chase earned his J.D. from the University of Virginia Law School and holds a B.A. from the University of California, Berkeley. His cross-disciplinary background allows him to translate legal complexity into actionable strategy at the intersection of technology, law, and business.</p>
+                    `
+                }
+            };
+            
+            if (profiles[profileId]) {
+                modalName.textContent = profiles[profileId].name;
+                modalTitle.textContent = profiles[profileId].title || '';
+                modalContent.innerHTML = profiles[profileId].content;
+                modal.classList.remove('hidden');
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+                
+                // Re-initialize lucide icons in the modal
+                setTimeout(() => {
+                    lucide.createIcons();
+                }, 200);
+            }
+        }
+        
+        window.closeProfileModal = function() {
+            console.log('Close button clicked!'); // Debug log
+            const modal = document.getElementById('profileModal');
+            modal.classList.add('hidden');
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+        
+        // Close modal on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && !document.getElementById('profileModal').classList.contains('hidden')) {
+                window.closeProfileModal();
+            }
+        });
+        
+        // Close modal on click outside
+        document.getElementById('profileModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                window.closeProfileModal();
+            }
+        });
+        
+        // Close button event listener - add with delay to ensure DOM is ready
+        setTimeout(function() {
+            const closeBtn = document.getElementById('modalCloseBtn');
+            if (closeBtn) {
+                closeBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log('Close button clicked!');
+                    window.closeProfileModal();
+                });
+            }
+        }, 500);
+    </script>
+
+    
+    
+</body>
+</html>
