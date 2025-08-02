@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Preconnect to external domains for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seamless Integration - AKM SecureKey</title>
+    <meta name="description" content="Zero downtime deployment across any OT platform. Integrate AKM SecureKey with your existing infrastructure without disruption.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Pure Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            safelist: [
+                'z-10', 'z-[15]', 'z-[20]', 'z-30', 'z-40', 'z-50', 'z-[999]',
+                'active', 'hidden', 'block', 'flex',
+                'translate-x-0', '-translate-x-full',
+                'opacity-0', 'opacity-100',
+                'invisible', 'visible',
+                'rotate-45', 'rotate-0'
+            ],
+            theme: {
+                extend: {
+                    colors: {
+                        'akm-black': '#000000',
+                        'akm-white': '#ffffff',
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Background overlay gradient */
+        .bg-gradient-overlay::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1));
+            z-index: 10;
+        }
+        
+        /* Component styles */
+            .nav-link::after {
+                content: '';
+                position: absolute;
+                bottom: -4px;
+                left: 50%;
+                width: 0;
+                height: 2px;
+                background: white;
+                transition: all 0.3s ease;
+                transform: translateX(-50%);
+            }
+            
+            .nav-link:hover::after {
+                width: 100%;
+            }
+            
+            .mobile-menu-overlay {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+            
+            .mobile-menu-overlay.active {
+                transform: translateX(0);
+            }
+            
+            /* Custom sub-hero section styling */
+            .sub-hero-section {
+                padding-top: 144px !important; /* 80px nav height + 64px spacing */
+                padding-bottom: 64px !important;
+                min-height: 30vh;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                overflow: hidden;
+            }
+            
+            /* Content-responsive height adjustment */
+            .sub-hero-section.content-responsive {
+                min-height: auto;
+                height: auto;
+            }
+            
+            /* Responsive height adjustments */
+            @media (min-width: 768px) {
+                .sub-hero-section {
+                    min-height: 35vh;
+                }
+            }
+            
+            @media (min-width: 1024px) {
+                .sub-hero-section {
+                    min-height: 40vh;
+                }
+            }
+            
+            .sub-hero-section::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1));
+                z-index: 10;
+            }
+            
+            .sub-hero-content {
+                position: relative;
+                z-index: 20;
+                max-width: none;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            
+            @media (min-width: 1024px) {
+                .sub-hero-content {
+                    padding-left: 2rem;
+                    padding-right: 2rem;
+                }
+            }
+        }
+        /* Button icon fix */
+        button i, a i {
+            pointer-events: none;
+            display: inline-block;
+        }
+        
+        /* Ensure dropdowns work on hover */
+        .group:hover .group-hover\:opacity-100 {
+            opacity: 1 !important;
+        }
+        
+        .group:hover .group-hover\:visible {
+            visibility: visible !important;
+        }
+        
+        /* Fix mobile menu positioning */
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* Ensure video displays properly */
+        .hero-video {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="font-inter">
+        <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="mainNav">
+        <div class="bg-black/25 backdrop-blur-md border-b-2 border-white transition-all duration-300" id="navContainer">
+            <div class="max-w-none mx-auto px-4 lg:px-8">
+                <div class="flex items-center h-20">
+                    <!-- Logo -->
+                    <a href="index.html" class="flex items-center">
+                        <img src="assets/akmlogo-white.png" width="160" height="40" alt="AKM SecureKey Logo" class="h-10">
+                    </a>
+                    
+                    <!-- Desktop Navigation -->
+                    <div class="hidden lg:flex items-center space-x-6 ml-12">
+                        <a href="index.html" class="nav-link relative text-white font-medium px-4 py-2 transition-all duration-300">Home</a>
+                        <a href="about.html" class="nav-link relative text-white font-medium px-4 py-2 transition-all duration-300">About</a>
+                        
+                        <!-- Solutions Dropdown -->
+                        <div class="relative group">
+                            <button class="nav-link relative text-white font-medium px-4 py-2 transition-all duration-300 inline-flex items-center gap-1">
+                                Solutions
+                                <i data-lucide="plus" class="w-4 h-4 transition-transform group-hover:rotate-45"></i>
+                            </button>
+                            <div class="absolute top-full left-0 mt-2 w-64 bg-black/95 backdrop-blur-md border border-white/20 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                                <div class="py-3">
+                                    <a href="solutions.html" class="block px-8 py-3 text-white hover:bg-white/10 transition-colors duration-200">Overview</a>
+                                    <a href="resilient-key-protection.html" class="block px-8 py-3 text-white hover:bg-white/10 transition-colors duration-200">Resilient Key Protection</a>
+                                    <a href="seamless-integration.html" class="block px-8 py-3 text-white hover:bg-white/10 transition-colors duration-200">Seamless Integration</a>
+                                    <a href="streamlined-compliance.html" class="block px-8 py-3 text-white hover:bg-white/10 transition-colors duration-200">Streamlined Compliance</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Industries Dropdown -->
+                        <div class="relative group">
+                            <button class="nav-link relative text-white font-medium px-4 py-2 transition-all duration-300 inline-flex items-center gap-1">
+                                Industries
+                                <i data-lucide="plus" class="w-4 h-4 transition-transform group-hover:rotate-45"></i>
+                            </button>
+                            <div class="absolute top-full left-0 mt-2 w-64 bg-black/95 backdrop-blur-md border border-white/20 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                                <div class="py-3">
+                                    <a href="industries.html" class="block px-8 py-3 text-white hover:bg-white/10 transition-colors duration-200">Overview</a>
+                                    <a href="industry-aerospace-defense.html" class="block px-8 py-3 text-white hover:bg-white/10 transition-colors duration-200">Aerospace & Defense</a>
+                                    <a href="industry-chemical-processing.html" class="block px-8 py-3 text-white hover:bg-white/10 transition-colors duration-200">Chemical Processing</a>
+                                    <a href="industry-energy-oil-gas.html" class="block px-8 py-3 text-white hover:bg-white/10 transition-colors duration-200">Energy (Oil & Gas)</a>
+                                    <a href="industry-financial-services.html" class="block px-8 py-3 text-white hover:bg-white/10 transition-colors duration-200">Financial Services</a>
+                                    <a href="industry-government.html" class="block px-8 py-3 text-white hover:bg-white/10 transition-colors duration-200">Government</a>
+                                    <a href="industry-manufacturing.html" class="block px-8 py-3 text-white hover:bg-white/10 transition-colors duration-200">Manufacturing</a>
+                                    <a href="industry-mining.html" class="block px-8 py-3 text-white hover:bg-white/10 transition-colors duration-200">Mining</a>
+                                    <a href="industry-pharmaceuticals.html" class="block px-8 py-3 text-white hover:bg-white/10 transition-colors duration-200">Pharmaceuticals</a>
+                                    <a href="industry-transportation.html" class="block px-8 py-3 text-white hover:bg-white/10 transition-colors duration-200">Transportation</a>
+                                    <a href="industry-utilities.html" class="block px-8 py-3 text-white hover:bg-white/10 transition-colors duration-200">Utilities</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right side buttons -->
+                    <div class="hidden lg:flex items-center space-x-4 ml-auto">
+                        <a href="contact.html" class="ring-2 ring-white text-white px-4 py-2 font-semibold hover:bg-white hover:text-black transition-all duration-300 inline-flex items-center gap-2">
+                            Contact
+                            <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#" class="bg-white text-black px-4 py-2 font-semibold hover:bg-gray-100 transition-all duration-300 inline-flex items-center gap-2">
+                            Login
+                            <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Mobile menu button -->
+                    <button class="lg:hidden text-white ml-auto" id="mobile-menu-toggle">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay fixed inset-0 bg-black/95 z-[999] lg:hidden" id="mobile-menu-overlay">
+        <div class="p-8 h-full flex flex-col">
+            <div class="flex justify-between items-center">
+                <img width="160" height="40" src="assets/akmlogo-white.png" alt="AKM SecureKey Logo" class="h-8">
+                <button id="close-menu-button" class="text-white">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <div class="flex flex-col space-y-4 mt-8">
+                <a href="index.html" class="text-white text-xl font-medium py-2">Home</a>
+                <a href="about.html" class="text-white text-xl font-medium py-2">About</a>
+                
+                <!-- Solutions Mobile -->
+                <div class="space-y-2">
+                    <div class="text-white text-xl font-medium py-2 flex items-center justify-between">
+                        <span>Solutions</span>
+                        <i data-lucide="plus" class="w-6 h-6" id="solutions-mobile-toggle"></i>
+                    </div>
+                    <div class="hidden space-y-2 ml-4" id="solutions-mobile-menu">
+                        <a href="solutions.html" class="text-white/80 text-lg py-1 block">Overview</a>
+                        <a href="resilient-key-protection.html" class="text-white/80 text-lg py-1 block">Resilient Key Protection</a>
+                        <a href="seamless-integration.html" class="text-white/80 text-lg py-1 block">Seamless Integration</a>
+                        <a href="streamlined-compliance.html" class="text-white/80 text-lg py-1 block">Streamlined Compliance</a>
+                    </div>
+                </div>
+                
+                <!-- Industries Mobile -->
+                <div class="space-y-2">
+                    <div class="text-white text-xl font-medium py-2 flex items-center justify-between">
+                        <span>Industries</span>
+                        <i data-lucide="plus" class="w-6 h-6" id="industries-mobile-toggle"></i>
+                    </div>
+                                        <div class="hidden space-y-2 ml-4" id="industries-mobile-menu">
+                        <a href="industries.html" class="text-white/80 text-lg py-1 block">Overview</a>
+                        <a href="industry-aerospace-defense.html" class="text-white/80 text-lg py-1 block">Aerospace & Defense</a>
+                        <a href="industry-chemical-processing.html" class="text-white/80 text-lg py-1 block">Chemical Processing</a>
+                        <a href="industry-energy-oil-gas.html" class="text-white/80 text-lg py-1 block">Energy (Oil & Gas)</a>
+                        <a href="industry-financial-services.html" class="text-white/80 text-lg py-1 block">Financial Services</a>
+                        <a href="industry-government.html" class="text-white/80 text-lg py-1 block">Government</a>
+                        <a href="industry-manufacturing.html" class="text-white/80 text-lg py-1 block">Manufacturing</a>
+                        <a href="industry-mining.html" class="text-white/80 text-lg py-1 block">Mining</a>
+                        <a href="industry-pharmaceuticals.html" class="text-white/80 text-lg py-1 block">Pharmaceuticals</a>
+                        <a href="industry-transportation.html" class="text-white/80 text-lg py-1 block">Transportation</a>
+                        <a href="industry-utilities.html" class="text-white/80 text-lg py-1 block">Utilities</a>
+                    </div>
+                    </div>
+                </div>
+                
+                <a href="contact.html" class="text-white text-xl font-medium py-2">Contact</a>
+                <a href="#" class="text-white text-xl font-medium py-2">Login</a>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!-- Hero Section -->
+    <section class="sub-hero-section content-responsive bg-gradient-overlay" style="background-image: url('assets/solutions-sub-hero-background.png');">
+        <div class="sub-hero-content">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Left Column - Content -->
+                <div class="lg:col-span-1">
+                    <div class="text-left mb-16">
+                        <nav class="flex items-center space-x-2 text-gray-300 mb-6">
+                            <a href="solutions.html" class="hover:text-white transition-colors">Solutions</a>
+                            <span>/</span>
+                            <span class="text-white">Seamless Integration</span>
+                        </nav>
+                        <h3 class="text-2xl lg:text-3xl font-normal text-gray-300 mb-6">Solutions</h3>
+                        <h1 class="text-4xl lg:text-5xl font-bold mb-8 text-white" style="line-height: 1.25;">Seamless Integration Across OT Platforms</h1>
+                    </div>
+                    <p class="text-xl lg:text-2xl leading-relaxed mb-8 max-w-4xl text-white">
+                        Plugs directly into existing OT stacks using modular, RESTful APIs — no custom development or heavy middleware required. It scales horizontally to support massive device deployments, and vertically across multiple industry verticals.
+                    </p>
+                </div>
+                
+                <!-- Right Column - Empty -->
+                <div class="lg:col-span-1">
+                    <!-- Empty column -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section class="py-16 lg:py-24 bg-white">
+        <div class="max-w-none mx-auto px-4 lg:px-8">
+            <h2 class="text-4xl lg:text-5xl font-bold text-black mb-12" style="line-height: 1.25;">Key Features</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="fade-in-card bg-black text-white p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="mb-4">
+                        <i data-lucide="minimize-2" class="w-10 h-10 text-white"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3 text-white">Micro Footprint</h3>
+                    <p class="text-gray-300 text-sm">Endpoint agents <10KB, deployable on constrained systems</p>
+                </div>
+                
+                <div class="fade-in-card bg-black text-white p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="mb-4">
+                        <i data-lucide="code" class="w-10 h-10 text-white"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3 text-white">API-Driven Architecture</h3>
+                    <p class="text-gray-300 text-sm">Integrates securely into modern and legacy systems alike</p>
+                </div>
+                
+                <div class="fade-in-card bg-black text-white p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="mb-4">
+                        <i data-lucide="settings" class="w-10 h-10 text-white"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3 text-white">Built-In Flexibility</h3>
+                    <p class="text-gray-300 text-sm">Crypto-agnostic design supports AES, HMAC, SHA256/512, and other NIST/FIPS-approved schemes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="py-16 lg:py-24 bg-gray-50">
+        <div class="max-w-none mx-auto px-4 lg:px-8">
+            <h2 class="text-4xl lg:text-5xl font-bold text-black mb-12" style="line-height: 1.25;">Use Cases</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="fade-in-card bg-white p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="mb-4">
+                        <i data-lucide="zap" class="w-10 h-10 text-black"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3 text-black">Embedding</h3>
+                    <p class="text-gray-600 text-sm">Into smart grid management systems</p>
+                </div>
+                
+                <div class="fade-in-card bg-white p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="mb-4">
+                        <i data-lucide="heart" class="w-10 h-10 text-black"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3 text-black">Securing</h3>
+                    <p class="text-gray-600 text-sm">Medical IoT devices</p>
+                </div>
+                
+                <div class="fade-in-card bg-white p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="mb-4">
+                        <i data-lucide="maximize-2" class="w-10 h-10 text-black"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3 text-black">Scaling</h3>
+                    <p class="text-gray-600 text-sm">Encrypted communications in transportation infrastructure</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-16">
+        <div class="max-w-none mx-auto px-4 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+                <div>
+                    <img src="assets/akmlogo-white.png" width="160" height="40" alt="AKM SecureKey Logo" class="h-8 mb-4">
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4">
+                        <a href="index.html" class="nav-link relative text-white hover:text-gray-300">Home</a>
+                    </h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="nav-link relative text-gray-400 hover:text-white">About</a></li>
+                        <li><a href="#" class="nav-link relative text-gray-400 hover:text-white">Login</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4">
+                        <a href="solutions.html" class="nav-link relative text-white hover:text-gray-300">Solutions</a>
+                    </h3>
+                    <ul class="space-y-2">
+                        <li><a href="resilient-key-protection.html" class="nav-link relative text-gray-400 hover:text-white">Resilient Key Protection</a></li>
+                        <li><a href="seamless-integration.html" class="nav-link relative text-gray-400 hover:text-white">Seamless Integration</a></li>
+                        <li><a href="streamlined-compliance.html" class="nav-link relative text-gray-400 hover:text-white">Streamlined Compliance</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4">
+                        <a href="industries.html" class="nav-link relative text-white hover:text-gray-300">Industries</a>
+                    </h3>
+                    <ul class="space-y-2">
+                        <li><a href="industry-aerospace-defense.html" class="nav-link relative text-gray-400 hover:text-white">Aerospace & Defense</a></li>
+                        <li><a href="industry-chemical-processing.html" class="nav-link relative text-gray-400 hover:text-white">Chemical Processing</a></li>
+                        <li><a href="industry-energy-oil-gas.html" class="nav-link relative text-gray-400 hover:text-white">Energy (Oil & Gas)</a></li>
+                        <li><a href="industry-financial-services.html" class="nav-link relative text-gray-400 hover:text-white">Financial Services</a></li>
+                        <li><a href="industry-government.html" class="nav-link relative text-gray-400 hover:text-white">Government</a></li>
+                        <li><a href="industry-manufacturing.html" class="nav-link relative text-gray-400 hover:text-white">Manufacturing</a></li>
+                        <li><a href="industry-mining.html" class="nav-link relative text-gray-400 hover:text-white">Mining</a></li>
+                        <li><a href="industry-pharmaceuticals.html" class="nav-link relative text-gray-400 hover:text-white">Pharmaceuticals</a></li>
+                        <li><a href="industry-transportation.html" class="nav-link relative text-gray-400 hover:text-white">Transportation</a></li>
+                        <li><a href="industry-utilities.html" class="nav-link relative text-gray-400 hover:text-white">Utilities</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-semibold mb-4">
+                        <a href="contact.html" class="nav-link relative text-white hover:text-gray-300">Contact</a>
+                    </h3>
+                    <ul class="space-y-2">
+                        <li><a href="mailto:info@akmcyber.com" class="nav-link relative text-gray-400 hover:text-white">info@akmcyber.com</a></li>
+                        <li class="text-gray-400 text-sm">
+                            1101 Wilson Boulevard, 6th Floor<br>
+                            Arlington, Virginia<br>
+                            22209, USA
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8">
+                <p class="text-gray-400 text-left">Copyright © 2025 AKM SecureKey</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Navigation scroll effect
+        window.addEventListener('scroll', () => {
+            const navContainer = document.getElementById('navContainer');
+            if (window.scrollY > 50) {
+                navContainer.classList.remove('bg-black/25');
+                navContainer.classList.add('bg-black/75');
+            } else {
+                navContainer.classList.remove('bg-black/75');
+                navContainer.classList.add('bg-black/25');
+            }
+        });
+        
+        // Initialize Lucide icons with delay
+        setTimeout(() => {
+            lucide.createIcons();
+        }, 100);
+        
+        // Re-initialize on dynamic content changes
+        // Debounced icon creation to prevent performance issues
+        let iconTimeout;
+        const observer = new MutationObserver(() => {
+            clearTimeout(iconTimeout);
+            iconTimeout = setTimeout(() => {
+                lucide.createIcons();
+            }, 100);
+        });
+        observer.observe(document.body, { childList: true, subtree: true });
+        
+        // Mobile menu functionality
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+        const closeMenuButton = document.getElementById('close-menu-button');
+        
+        // Mobile dropdown toggles
+        const solutionsToggle = document.getElementById('solutions-mobile-toggle');
+        const solutionsMenu = document.getElementById('solutions-mobile-menu');
+        const industriesToggle = document.getElementById('industries-mobile-toggle');
+        const industriesMenu = document.getElementById('industries-mobile-menu');
+
+        solutionsToggle.addEventListener('click', () => {
+            solutionsMenu.classList.toggle('hidden');
+            solutionsToggle.style.transform = solutionsMenu.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(45deg)';
+        });
+
+        industriesToggle.addEventListener('click', () => {
+            industriesMenu.classList.toggle('hidden');
+            industriesToggle.style.transform = industriesMenu.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(45deg)';
+        });
+        
+        mobileMenuToggle.addEventListener('click', function() {
+            mobileMenuOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        function closeMobileMenu() {
+            mobileMenuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        
+        closeMenuButton.addEventListener('click', closeMobileMenu);
+        
+        mobileMenuOverlay.addEventListener('click', function(e) {
+            if (e.target === mobileMenuOverlay) {
+                closeMobileMenu();
+            }
+        });
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && mobileMenuOverlay.classList.contains('active')) {
+                closeMobileMenu();
+            }
+        });
+    </script>
+</body>
+</html>
