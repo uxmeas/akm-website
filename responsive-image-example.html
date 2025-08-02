@@ -131,5 +131,51 @@ checkWebP(function(support) {
         <li>Reduced bandwidth usage</li>
         <li>Improved SEO and Core Web Vitals scores</li>
     </ul>
+<script>
+        
+        // Image loading with skeleton
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add skeleton loaders to large images
+            const largeImages = document.querySelectorAll('img[src*="-large"], img[src*="hero"], img[src*="background"]');
+            
+            largeImages.forEach(img => {
+                // Skip if already processed
+                if (img.closest('.image-container')) return;
+                
+                // Wrap image in container
+                const container = document.createElement('div');
+                container.className = 'image-container loading';
+                container.style.width = img.style.width || '100%';
+                container.style.height = img.style.height || 'auto';
+                
+                // Create skeleton
+                const skeleton = document.createElement('div');
+                skeleton.className = 'skeleton skeleton-loader';
+                skeleton.style.minHeight = '200px';
+                
+                // Wrap the image
+                img.parentNode.insertBefore(container, img);
+                container.appendChild(skeleton);
+                container.appendChild(img);
+                
+                // Handle image load
+                if (img.complete) {
+                    container.classList.remove('loading');
+                    container.classList.add('loaded');
+                } else {
+                    img.addEventListener('load', function() {
+                        container.classList.remove('loading');
+                        container.classList.add('loaded');
+                    });
+                    
+                    img.addEventListener('error', function() {
+                        container.classList.remove('loading');
+                        skeleton.style.background = '#f0f0f0';
+                        skeleton.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #999;">Failed to load image</div>';
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>

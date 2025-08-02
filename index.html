@@ -11,7 +11,12 @@
     <title>AKM SecureKey - Next-Gen OT Cybersecurity</title>
     <meta name="description" content="Protect critical infrastructure with quantum-resilient key management. Secure SCADA systems, industrial control systems, and OT environments with zero-trust security.">
     
-    <!-- Google Fonts -->
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Lucide Icons -->
@@ -222,6 +227,44 @@
             width: 100%;
             height: 100%;
         }
+    
+        /* Skeleton loader styles */
+        .skeleton-loader {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+        }
+        
+        @keyframes loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+        
+        .image-container {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .image-container img {
+            transition: opacity 0.3s ease;
+        }
+        
+        .image-container.loading img {
+            opacity: 0;
+        }
+        
+        .image-container .skeleton {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        
+        .image-container.loaded .skeleton {
+            display: none;
+        }
     </style>
 </head>
 <body class="font-inter">
@@ -316,9 +359,9 @@
                 
                 <!-- Solutions Mobile -->
                 <div class="space-y-2">
-                    <div class="text-white text-xl font-medium py-2 flex items-center justify-between">
+                    <div class="text-white text-xl font-medium py-2 flex items-center justify-between cursor-pointer" id="solutions-mobile-toggle">
                         <span>Solutions</span>
-                        <i data-lucide="plus" class="w-6 h-6" id="solutions-mobile-toggle"></i>
+                        <i data-lucide="plus" class="w-6 h-6"></i>
                     </div>
                     <div class="hidden space-y-2 ml-4" id="solutions-mobile-menu">
                         <a href="solutions.html" class="text-white/80 text-lg py-1 block">Overview</a>
@@ -330,9 +373,9 @@
                 
                 <!-- Industries Mobile -->
                 <div class="space-y-2">
-                    <div class="text-white text-xl font-medium py-2 flex items-center justify-between">
+                    <div class="text-white text-xl font-medium py-2 flex items-center justify-between cursor-pointer" id="industries-mobile-toggle">
                         <span>Industries</span>
-                        <i data-lucide="plus" class="w-6 h-6" id="industries-mobile-toggle"></i>
+                        <i data-lucide="plus" class="w-6 h-6"></i>
                     </div>
                     <div class="hidden space-y-2 ml-4" id="industries-mobile-menu">
                         <a href="industries.html" class="text-white/80 text-lg py-1 block">Overview</a>
@@ -418,7 +461,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
                 <div class="bg-white shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                     <div class="mb-4">
-                        <i data-lucide="shield-check" class="w-8 h-8 text-black"></i>
+                        <i data-lucide="shield-check" class="w-10 h-10 text-black"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-3">Patent-Backed Security</h3>
                     <p class="text-gray-600">Four patents power our unique approach to autonomous key management</p>
@@ -426,7 +469,7 @@
                 
                 <div class="bg-white shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                     <div class="mb-4">
-                        <i data-lucide="code" class="w-8 h-8 text-black"></i>
+                        <i data-lucide="code" class="w-10 h-10 text-black"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-3">High-Performance Codebase</h3>
                     <p class="text-gray-600">C-based, modular components under 10KB — optimized for embedded and air-gapped systems</p>
@@ -434,7 +477,7 @@
                 
                 <div class="bg-white shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                     <div class="mb-4">
-                        <i data-lucide="settings" class="w-8 h-8 text-black"></i>
+                        <i data-lucide="settings" class="w-10 h-10 text-black"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-3">One-Time Setup</h3>
                     <p class="text-gray-600">Fully autonomous and self-healing, with no ongoing human oversight</p>
@@ -442,7 +485,7 @@
                 
                 <div class="bg-white shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                     <div class="mb-4">
-                        <i data-lucide="check-circle" class="w-8 h-8 text-black"></i>
+                        <i data-lucide="check-circle" class="w-10 h-10 text-black"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-3">Compliance Ready</h3>
                     <p class="text-gray-600">Aligned with EU and global cybersecurity mandates like IEC 62443 and NIS2</p>
@@ -492,7 +535,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
                 <div class="bg-black text-white shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                     <div class="mb-4">
-                        <i data-lucide="shield" class="w-8 h-8 text-white"></i>
+                        <i data-lucide="shield" class="w-10 h-10 text-white"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-3 text-white">Quantum Resilient</h3>
                     <p class="text-gray-300">Framework that authenticates every connection</p>
@@ -500,7 +543,7 @@
                 
                 <div class="bg-black text-white shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                     <div class="mb-4">
-                        <i data-lucide="settings" class="w-8 h-8 text-white"></i>
+                        <i data-lucide="settings" class="w-10 h-10 text-white"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-3 text-white">One-Time Setup</h3>
                     <p class="text-gray-300">A set up that runs forever without human oversight</p>
@@ -508,7 +551,7 @@
                 
                 <div class="bg-black text-white shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                     <div class="mb-4">
-                        <i data-lucide="lock" class="w-8 h-8 text-white"></i>
+                        <i data-lucide="lock" class="w-10 h-10 text-white"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-3 text-white">Implicit Zero Trust</h3>
                     <p class="text-gray-300">A system that delivers implicit Zero Trust, by default, with every frame</p>
@@ -516,7 +559,7 @@
                 
                 <div class="bg-black text-white shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                     <div class="mb-4">
-                        <i data-lucide="cpu" class="w-8 h-8 text-white"></i>
+                        <i data-lucide="cpu" class="w-10 h-10 text-white"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-3 text-white">10KB Footprint</h3>
                     <p class="text-gray-300">Architected server/client multitrack applications for broadcasting</p>
@@ -548,7 +591,7 @@
                     <div class="fade-in-card bg-white border-t-4 border-black shadow-lg p-8 hover:shadow-xl transition-all duration-300">
                         <div class="flex items-center gap-3 mb-6">
                             <div class="p-3 bg-gray-100 rounded-lg">
-                                <i data-lucide="shield-off" class="w-8 h-8 text-black"></i>
+                                <i data-lucide="shield-off" class="w-10 h-10 text-black"></i>
                             </div>
                             <span class="text-sm font-semibold text-gray-500 tracking-widest uppercase">Solution #1</span>
                         </div>
@@ -574,7 +617,7 @@
                     <div class="fade-in-card bg-white border-t-4 border-black shadow-lg p-8 hover:shadow-xl transition-all duration-300">
                         <div class="flex items-center gap-3 mb-6">
                             <div class="p-3 bg-gray-100 rounded-lg">
-                                <i data-lucide="check-circle" class="w-8 h-8 text-black"></i>
+                                <i data-lucide="check-circle" class="w-10 h-10 text-black"></i>
                             </div>
                             <span class="text-sm font-semibold text-gray-500 tracking-widest uppercase">Solution #2</span>
                         </div>
@@ -600,7 +643,7 @@
                     <div class="fade-in-card bg-white border-t-4 border-black shadow-lg p-8 hover:shadow-xl transition-all duration-300">
                         <div class="flex items-center gap-3 mb-6">
                             <div class="p-3 bg-gray-100 rounded-lg">
-                                <i data-lucide="settings" class="w-8 h-8 text-black"></i>
+                                <i data-lucide="settings" class="w-10 h-10 text-black"></i>
                             </div>
                             <span class="text-sm font-semibold text-gray-500 tracking-widest uppercase">Solution #3</span>
                         </div>
@@ -641,7 +684,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <a href="industry-energy-oil-gas.html" class="fade-in-card block bg-black text-white shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                     <div class="mb-4">
-                        <i data-lucide="zap" class="w-8 h-8 text-white"></i>
+                        <i data-lucide="zap" class="w-10 h-10 text-white"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-3 text-white">Energy</h3>
                     <p class="text-gray-300 mb-4">Secure isolated grids and remote pipelines</p>
@@ -652,7 +695,7 @@
                 
                 <a href="industry-manufacturing.html" class="fade-in-card block bg-black text-white shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                     <div class="mb-4">
-                        <i data-lucide="factory" class="w-8 h-8 text-white"></i>
+                        <i data-lucide="factory" class="w-10 h-10 text-white"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-3 text-white">Manufacturing</h3>
                     <p class="text-gray-300 mb-4">Protect PLCs, SCADA, and connected factory assets</p>
@@ -663,7 +706,7 @@
                 
                 <a href="industry-utilities.html" class="fade-in-card block bg-black text-white shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                     <div class="mb-4">
-                        <i data-lucide="power" class="w-8 h-8 text-white"></i>
+                        <i data-lucide="power" class="w-10 h-10 text-white"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-3 text-white">Utilities</h3>
                     <p class="text-gray-300 mb-4">Ensure security and compliance for essential infrastructure</p>
@@ -801,53 +844,75 @@
         });
         observer.observe(document.body, { childList: true, subtree: true });
         
-                // Mobile menu functionality
-        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
-        const closeMenuButton = document.getElementById('close-menu-button');
-        
-        // Mobile dropdown toggles
-        const solutionsToggle = document.getElementById('solutions-mobile-toggle');
-        const solutionsMenu = document.getElementById('solutions-mobile-menu');
-        const industriesToggle = document.getElementById('industries-mobile-toggle');
-        const industriesMenu = document.getElementById('industries-mobile-menu');
+                // Mobile menu functionality - wrapped in DOMContentLoaded to ensure elements exist
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+            const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+            const closeMenuButton = document.getElementById('close-menu-button');
+            
+            // Mobile dropdown toggles
+            const solutionsToggle = document.getElementById('solutions-mobile-toggle');
+            const solutionsMenu = document.getElementById('solutions-mobile-menu');
+            const industriesToggle = document.getElementById('industries-mobile-toggle');
+            const industriesMenu = document.getElementById('industries-mobile-menu');
 
-        solutionsToggle.addEventListener('click', () => {
-            solutionsMenu.classList.toggle('hidden');
-            solutionsToggle.style.transform = solutionsMenu.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(45deg)';
-        });
-
-        industriesToggle.addEventListener('click', () => {
-            industriesMenu.classList.toggle('hidden');
-            industriesToggle.style.transform = industriesMenu.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(45deg)';
-        });
-        
-        mobileMenuToggle.addEventListener('click', function() {
-            mobileMenuOverlay.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        });
-        
-        function closeMobileMenu() {
-            mobileMenuOverlay.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-        
-        closeMenuButton.addEventListener('click', closeMobileMenu);
-        
-        mobileMenuOverlay.addEventListener('click', function(e) {
-            if (e.target === mobileMenuOverlay) {
-                closeMobileMenu();
+            // Ensure elements exist before adding listeners
+            if (solutionsToggle && solutionsMenu) {
+                solutionsToggle.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    solutionsMenu.classList.toggle('hidden');
+                    
+                    // Find and rotate the icon (svg after Lucide processes it)
+                    const icon = solutionsToggle.querySelector('svg');
+                    if (icon) {
+                        icon.style.transform = solutionsMenu.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(45deg)';
+                        icon.style.transition = 'transform 0.3s ease';
+                    }
+                });
             }
-        });
-        
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && mobileMenuOverlay.classList.contains('active')) {
-                closeMobileMenu();
+
+            if (industriesToggle && industriesMenu) {
+                industriesToggle.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    industriesMenu.classList.toggle('hidden');
+                    
+                    // Find and rotate the icon (svg after Lucide processes it)
+                    const icon = industriesToggle.querySelector('svg');
+                    if (icon) {
+                        icon.style.transform = industriesMenu.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(45deg)';
+                        icon.style.transition = 'transform 0.3s ease';
+                    }
+                });
+            }
+            
+            if (mobileMenuToggle && mobileMenuOverlay && closeMenuButton) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    mobileMenuOverlay.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+                
+                function closeMobileMenu() {
+                    mobileMenuOverlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+                
+                closeMenuButton.addEventListener('click', closeMobileMenu);
+                
+                mobileMenuOverlay.addEventListener('click', function(e) {
+                    if (e.target === mobileMenuOverlay) {
+                        closeMobileMenu();
+                    }
+                });
+                
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && mobileMenuOverlay.classList.contains('active')) {
+                        closeMobileMenu();
+                    }
+                });
             }
         });
     </script>
-
-    
-    
 </body>
 </html> 

@@ -11,7 +11,12 @@
     <title>About AKM SecureKey - Leading OT Security Innovation</title>
     <meta name="description" content="Learn about AKM SecureKey's mission to secure critical infrastructure with quantum-resilient technology. Meet our leadership team and discover our cybersecurity expertise.">
     
-    <!-- Google Fonts -->
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Lucide Icons -->
@@ -191,6 +196,44 @@
                 transform: translateY(0);
             }
         }
+    
+        /* Skeleton loader styles */
+        .skeleton-loader {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+        }
+        
+        @keyframes loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+        
+        .image-container {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .image-container img {
+            transition: opacity 0.3s ease;
+        }
+        
+        .image-container.loading img {
+            opacity: 0;
+        }
+        
+        .image-container .skeleton {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        
+        .image-container.loaded .skeleton {
+            display: none;
+        }
     </style>
 </head>
 <body class="font-inter">
@@ -285,9 +328,9 @@
                 
                 <!-- Solutions Mobile -->
                 <div class="space-y-2">
-                    <div class="text-white text-xl font-medium py-2 flex items-center justify-between">
+                    <div class="text-white text-xl font-medium py-2 flex items-center justify-between cursor-pointer" id="solutions-mobile-toggle">
                         <span>Solutions</span>
-                        <i data-lucide="plus" class="w-6 h-6" id="solutions-mobile-toggle"></i>
+                        <i data-lucide="plus" class="w-6 h-6"></i>
                     </div>
                     <div class="hidden space-y-2 ml-4" id="solutions-mobile-menu">
                         <a href="solutions.html" class="text-white/80 text-lg py-1 block">Overview</a>
@@ -299,9 +342,9 @@
                 
                 <!-- Industries Mobile -->
                 <div class="space-y-2">
-                    <div class="text-white text-xl font-medium py-2 flex items-center justify-between">
+                    <div class="text-white text-xl font-medium py-2 flex items-center justify-between cursor-pointer" id="industries-mobile-toggle">
                         <span>Industries</span>
-                        <i data-lucide="plus" class="w-6 h-6" id="industries-mobile-toggle"></i>
+                        <i data-lucide="plus" class="w-6 h-6"></i>
                     </div>
                     <div class="hidden space-y-2 ml-4" id="industries-mobile-menu">
                         <a href="industries.html" class="text-white/80 text-lg py-1 block">Overview</a>
@@ -598,131 +641,6 @@
         });
         observer.observe(document.body, { childList: true, subtree: true });
         
-                // Mobile menu functionality
-        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
-        const closeMenuButton = document.getElementById('close-menu-button');
-        
-        // Mobile dropdown toggles
-        const solutionsToggle = document.getElementById('solutions-mobile-toggle');
-        const solutionsMenu = document.getElementById('solutions-mobile-menu');
-        const industriesToggle = document.getElementById('industries-mobile-toggle');
-        const industriesMenu = document.getElementById('industries-mobile-menu');
-
-        solutionsToggle.addEventListener('click', () => {
-            solutionsMenu.classList.toggle('hidden');
-            solutionsToggle.style.transform = solutionsMenu.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(45deg)';
-        });
-
-        industriesToggle.addEventListener('click', () => {
-            industriesMenu.classList.toggle('hidden');
-            industriesToggle.style.transform = industriesMenu.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(45deg)';
-        });
-        
-        mobileMenuToggle.addEventListener('click', function() {
-            mobileMenuOverlay.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        });
-        
-        function closeMobileMenu() {
-            mobileMenuOverlay.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-        
-        closeMenuButton.addEventListener('click', closeMobileMenu);
-        
-        mobileMenuOverlay.addEventListener('click', function(e) {
-            if (e.target === mobileMenuOverlay) {
-                closeMobileMenu();
-            }
-        });
-        
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && mobileMenuOverlay.classList.contains('active')) {
-                closeMobileMenu();
-            }
-        });
-
-        // Profile modal functionality
-        window.openProfileModal = function(profileId) {
-            const modal = document.getElementById('profileModal');
-            const modalName = document.getElementById('modalName');
-            const modalTitle = document.getElementById('modalTitle');
-            const modalContent = document.getElementById('modalContent');
-            
-            const profiles = {
-                'bart-shields': {
-                    name: 'Bart Shields',
-                    title: 'Founder, Chief Architect & Inventor',
-                    content: `
-                        <p class="text-lg leading-relaxed mb-4">Bart Shields is a pioneering technologist with over two decades of experience developing quantum-resilient solutions for critical infrastructure, aerospace, defense, and industrial systems. As Founder, Chief Architect, and Inventor at AKM Cyber Corp., Bart leads the innovation behind AKM's Autonomous Key Management (AKM) system, which enables zero-knowledge authentication, cryptographic agility, and Zero Trust in every data frame.</p>
-                        <p class="text-lg leading-relaxed mb-4">Over his career, Bart has held senior engineering roles at Solectek, Datron World, Invensys Rail (now Siemens), Arynga (now Intel), and General Dynamics, where he developed embedded cybersecurity solutions and secure boot architectures for complex systems, including DoD-certified vehicles, wireless communication equipment, and avionics. He holds multiple U.S. patents for secure communications, synchronized encryption, and distributed queueing—technologies foundational to AKM's platform. His work has consistently bridged the gap between theoretical cryptography and field-deployable software, with deployments in land, sea, and aerospace domains.</p>
-                        <p class="text-lg leading-relaxed">Bart's technical scope spans C-based low-level firmware development, bootloaders, board support packages, and real-time OS integration across ARM, NIOS2, and PowerPC chipsets, to conceptualizing, designing, and overseeing development of products and product lines. At AKM, he applies this experience to develop lightweight, scalable, and quantum-resilient encryption tools that simplify compliance and eliminate PKI overhead. His mission is to empower organizations with security that is not only certifiable but operationally effortless.</p>
-                    `
-                },
-                'larry-butler': {
-                    name: 'Larry Butler',
-                    title: 'Founder and Chief Engineer',
-                    content: `
-                        <p class="text-lg leading-relaxed mb-4">Larry Butler is a veteran software engineer and systems architect with over 30 years of experience in embedded systems, secure communications, and mission-critical aerospace software. As Founder and Chief Engineer at AKM Cyber Corp., Larry plays a pivotal role in advancing the core codebase of AKM SecureKey and supporting its integration across military and industrial platforms.</p>
-                        <p class="text-lg leading-relaxed mb-4">Throughout his career, Larry has built software for real-time operating systems including VxWorks, Integrity, FreeRTOS, and Embedded Linux, contributing to systems such as the F-16 Center Pedestal Display, F-35 weapons simulation, and C-17 Heads-Up Display. His deep knowledge spans C/C++, assembly, and Ada, with development across platforms from ARM and Intel to Altera NIOS2 and PowerPC. He has also contributed to major telecom and network infrastructure projects through roles at AMCC, TelStrat, and Ascom Timeplex.</p>
-                        <p class="text-lg leading-relaxed">Larry's extensive credentials include DO-178C-certified flight software, military operational flight programs, and patented avionics display systems. His work bridges the technical depth of embedded systems with the compliance rigor of aerospace-grade cybersecurity. At AKM, Larry ensures the platform's performance, portability, and readiness for deployment in regulated and high-assurance environments.</p>
-                    `
-                },
-                'brian-mcgowan': {
-                    name: 'Brian McGowan',
-                    title: 'Chief Executive Officer',
-                    content: `
-                        <p class="text-lg leading-relaxed mb-4">Brian McGowan is a seasoned entrepreneur, operator, and venture strategist, with more than 25 years of experience launching, scaling, and advising high-growth technology companies. His background spans enterprise SaaS, applied AI, digital infrastructure, and investment platforms — making him a versatile leader at the intersection of innovation and execution. As CEO of AKM, Brian draws on deep expertise in venture building, go-to-market strategy, and product commercialization to scale AKM's groundbreaking cybersecurity solutions across global markets.</p>
-                        <p class="text-lg leading-relaxed mb-4">Brian has advised numerous venture-backed and growth-stage companies including InvestorFlow, DealCloud (Intapp, NYSE: INTA), Mercatus (State Street Alpha), Dynamo Software, Katipult Technology Corp, Syncarpha Capital, and Leverton (acquired by MRI Software). His roles have spanned board service, CRO leadership, and strategic advisory — often guiding companies through market entry, capital formation, and operational scale.</p>
-                        <p class="text-lg leading-relaxed">Previously, Brian served as CEO of Peracon, a digital real estate transaction platform that facilitated more than $300 billion in asset sales prior to its acquisition by Real Capital Markets. Brian is managing partner of BlueWave Ventures, a merchant venture development firm that has invested in, advised, and partnered with companies totaling over $1.8 billion in market capitalization. BlueWave's portfolio spans fintech, cleantech, proptech, and broader enterprise software sectors — offering a proven model for turning transformative technology into scalable commercial outcomes. He has also led CMBS intelligence initiatives, enterprise SaaS rollouts, and product launches across private and public markets.</p>
-                    `
-                },
-                'klemens-geiger': {
-                    name: 'Klemens Geiger',
-                    title: 'Chief Compliance Officer',
-                    content: `
-                        <p class="text-lg leading-relaxed mb-4">Klemens Geiger brings over 30 years of experience in cybersecurity, embedded systems, and standards development across the railway, aerospace, and industrial sectors. At AKM Cyber Corp., he leads cybersecurity compliance and system architecture, applying his deep understanding of European and global industrial standards to the AKM SecureKey platform.</p>
-                        <p class="text-lg leading-relaxed mb-4">Klemens previously served as Head of Industrial Cybersecurity at Bombardier Transportation, where he led the global Center of Competence and developed defense-in-depth strategies for ICS networks in rail vehicles. He contributed to the EN TS 50701 standard as part of the German CENELEC committee, helping define cybersecurity best practices for rail and critical infrastructure. His experience also includes leading test labs and overseeing cybersecurity for ALSTOM's DACH operations.</p>
-                        <p class="text-lg leading-relaxed mb-4">Klemens began his career developing professional audio multitrack equipment for TV, Radio, Studio Production on the international level with different platforms from 1990 until end of 2004. Achieving worldwide success by developing the first fully digital high resolution hard disc record/playback (32 Tracks) with overdubbing capability for studio production (1994). Klemens developed endless multitrack recording/playback audio server-system for the first installation with the German Parliament, Reichstag/Hauptstadt studio Berlin (1998). Related efforts include development of professional audio systems for clients such as Munich Airport and the Olympic Games.</p>
-                        <p class="text-lg leading-relaxed">Klemens then transitioned into avionics, in a variety of senior roles, where he founded and led the global Center of Competence. Managing and leading all phases of the entire engineering process in accordance with DO 178B. Thus, leading the effort to become an accepted supplier of Integrated Modular Avionics (IMA) modules based Systems by AIRBUS. As well as being nominated as a Checker within the 1020 program of AIRBUS. Klemens' contributions include contributing to certified systems on the Airbus A350 and A400M. Fluent in German and English, Klemens ensures AKM's offerings are built on globally recognized, certifiable foundations—ready for deployment in safety-critical environments worldwide.</p>
-                    `
-                },
-                'doug-mclean': {
-                    name: 'Doug McLean',
-                    title: 'Chief Product Officer',
-                    content: `
-                        <p class="text-lg leading-relaxed mb-4">Doug McLean is a veteran engineering and technology executive with over two decades of experience in software architecture, product delivery, and venture operations. As Chief Product Officer of AKM Cyber Corp., Doug leads the company's technical roadmap, product development, and IP strategy. He is known for building high-performance teams and scalable systems across fintech, blockchain, and cryptographic platforms.</p>
-                        <p class="text-lg leading-relaxed mb-4">Doug previously served as CTO at Katipult, a Canadian fintech company he helped take public in 2018 on the TSX Venture Exchange. There, he steered the company's evolution from a crowdfunding platform to a provider of enterprise software for investment banking and broker-dealer operations. Doug has also advised and served as interim CTO for Web3 and financial infrastructure startups, leveraging his expertise in cryptography, Bitcoin, Ethereum, and decentralized technologies.</p>
-                        <p class="text-lg leading-relaxed">Doug holds a Master's degree in Applied Mathematics from the University of Calgary, where he studied cryptographic research. His academic and professional background inform a systems-thinking approach that blends rigorous technical design with real-world implementation. At AKM, he drives the creation of quantum-resilient cybersecurity tools that bring breakthrough performance and operational simplicity to industrial control systems.</p>
-                    `
-                },
-                'chase-exon': {
-                    name: 'Chase Exon, Esq.',
-                    title: 'General Counsel',
-                    content: `
-                        <p class="text-lg leading-relaxed mb-4">Chase Exon is an accomplished legal and business executive with 20 years of experience advising high-growth technology companies on corporate law, M&A, and strategic operations. As General Counsel of AKM Cyber Corp., Chase provides legal oversight, risk mitigation, and deal structuring expertise, supporting the company's expansion and capital formation strategies.</p>
-                        <p class="text-lg leading-relaxed mb-4">Chase began his legal career at O'Melveny & Myers LLP, where he specialized in corporate finance, mergers and acquisitions, and emerging growth companies. He later co-founded Vantage Sports, a sports analytics startup, where he served as president, CFO, and general counsel, and led the company through its early growth. Following this, he joined Conexant Systems as General Counsel, navigating the company through its acquisition by Synaptics, and served as General Counsel and Secretary for Liberated Brands LLC, a global brand operating company whose portfolio included Volcom, Quiksilver, Billabong, RVCA, and Spyder.</p>
-                        <p class="text-lg leading-relaxed">Chase earned his J.D. from the University of Virginia Law School and holds a B.A. from the University of California, Berkeley. His cross-disciplinary background allows him to translate legal complexity into actionable strategy at the intersection of technology, law, and business.</p>
-                    `
-                }
-            };
-            
-            if (profiles[profileId]) {
-                modalName.textContent = profiles[profileId].name;
-                modalTitle.textContent = profiles[profileId].title || '';
-                modalContent.innerHTML = profiles[profileId].content;
-                modal.classList.remove('hidden');
-                modal.style.display = 'flex';
-                document.body.style.overflow = 'hidden';
-                
-                // Re-initialize lucide icons in the modal
-                setTimeout(() => {
-                    lucide.createIcons();
-                }, 200);
-            }
-        }
-        
         window.closeProfileModal = function() {
             console.log('Close button clicked!'); // Debug log
             const modal = document.getElementById('profileModal');
@@ -761,5 +679,121 @@
 
     
     
+<script>
+        
+        // Image loading with skeleton
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add skeleton loaders to large images
+            const largeImages = document.querySelectorAll('img[src*="-large"], img[src*="hero"], img[src*="background"]');
+            
+            largeImages.forEach(img => {
+                // Skip if already processed
+                if (img.closest('.image-container')) return;
+                
+                // Wrap image in container
+                const container = document.createElement('div');
+                container.className = 'image-container loading';
+                container.style.width = img.style.width || '100%';
+                container.style.height = img.style.height || 'auto';
+                
+                // Create skeleton
+                const skeleton = document.createElement('div');
+                skeleton.className = 'skeleton skeleton-loader';
+                skeleton.style.minHeight = '200px';
+                
+                // Wrap the image
+                img.parentNode.insertBefore(container, img);
+                container.appendChild(skeleton);
+                container.appendChild(img);
+                
+                // Handle image load
+                if (img.complete) {
+                    container.classList.remove('loading');
+                    container.classList.add('loaded');
+                } else {
+                    img.addEventListener('load', function() {
+                        container.classList.remove('loading');
+                        container.classList.add('loaded');
+                    });
+                    
+                    img.addEventListener('error', function() {
+                        container.classList.remove('loading');
+                        skeleton.style.background = '#f0f0f0';
+                        skeleton.innerHTML = '<div style="display: flex; align-items: center; justify-content: center; height: 100%; color: #999;">Failed to load image</div>';
+                    });
+                }
+            });
+        });
+    
+        // Mobile menu functionality - wrapped in DOMContentLoaded to ensure elements exist
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+            const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+            const closeMenuButton = document.getElementById('close-menu-button');
+            
+            // Mobile dropdown toggles
+            const solutionsToggle = document.getElementById('solutions-mobile-toggle');
+            const solutionsMenu = document.getElementById('solutions-mobile-menu');
+            const industriesToggle = document.getElementById('industries-mobile-toggle');
+            const industriesMenu = document.getElementById('industries-mobile-menu');
+
+            // Ensure elements exist before adding listeners
+            if (solutionsToggle && solutionsMenu) {
+                solutionsToggle.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    solutionsMenu.classList.toggle('hidden');
+                    
+                    // Find and rotate the icon (svg after Lucide processes it)
+                    const icon = solutionsToggle.querySelector('svg');
+                    if (icon) {
+                        icon.style.transform = solutionsMenu.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(45deg)';
+                        icon.style.transition = 'transform 0.3s ease';
+                    }
+                });
+            }
+
+            if (industriesToggle && industriesMenu) {
+                industriesToggle.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    industriesMenu.classList.toggle('hidden');
+                    
+                    // Find and rotate the icon (svg after Lucide processes it)
+                    const icon = industriesToggle.querySelector('svg');
+                    if (icon) {
+                        icon.style.transform = industriesMenu.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(45deg)';
+                        icon.style.transition = 'transform 0.3s ease';
+                    }
+                });
+            }
+            
+            if (mobileMenuToggle && mobileMenuOverlay && closeMenuButton) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    mobileMenuOverlay.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+                
+                function closeMobileMenu() {
+                    mobileMenuOverlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+                
+                closeMenuButton.addEventListener('click', closeMobileMenu);
+                
+                mobileMenuOverlay.addEventListener('click', function(e) {
+                    if (e.target === mobileMenuOverlay) {
+                        closeMobileMenu();
+                    }
+                });
+                
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && mobileMenuOverlay.classList.contains('active')) {
+                        closeMobileMenu();
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>

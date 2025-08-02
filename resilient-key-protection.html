@@ -11,7 +11,12 @@
     <title>Resilient Key Protection - AKM SecureKey</title>
     <meta name="description" content="Quantum-resilient key management for critical infrastructure. Future-proof your OT security with advanced cryptographic protection.">
     
-    <!-- Google Fonts -->
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Lucide Icons -->
@@ -186,6 +191,44 @@
             width: 100%;
             height: 100%;
         }
+    
+        /* Skeleton loader styles */
+        .skeleton-loader {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+        }
+        
+        @keyframes loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+        
+        .image-container {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .image-container img {
+            transition: opacity 0.3s ease;
+        }
+        
+        .image-container.loading img {
+            opacity: 0;
+        }
+        
+        .image-container .skeleton {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        
+        .image-container.loaded .skeleton {
+            display: none;
+        }
     </style>
 </head>
 <body class="font-inter">
@@ -280,9 +323,9 @@
                 
                 <!-- Solutions Mobile -->
                 <div class="space-y-2">
-                    <div class="text-white text-xl font-medium py-2 flex items-center justify-between">
+                    <div class="text-white text-xl font-medium py-2 flex items-center justify-between cursor-pointer" id="solutions-mobile-toggle">
                         <span>Solutions</span>
-                        <i data-lucide="plus" class="w-6 h-6" id="solutions-mobile-toggle"></i>
+                        <i data-lucide="plus" class="w-6 h-6"></i>
                     </div>
                     <div class="hidden space-y-2 ml-4" id="solutions-mobile-menu">
                         <a href="solutions.html" class="text-white/80 text-lg py-1 block">Overview</a>
@@ -294,9 +337,9 @@
                 
                 <!-- Industries Mobile -->
                 <div class="space-y-2">
-                    <div class="text-white text-xl font-medium py-2 flex items-center justify-between">
+                    <div class="text-white text-xl font-medium py-2 flex items-center justify-between cursor-pointer" id="industries-mobile-toggle">
                         <span>Industries</span>
-                        <i data-lucide="plus" class="w-6 h-6" id="industries-mobile-toggle"></i>
+                        <i data-lucide="plus" class="w-6 h-6"></i>
                     </div>
                                         <div class="hidden space-y-2 ml-4" id="industries-mobile-menu">
                         <a href="industries.html" class="text-white/80 text-lg py-1 block">Overview</a>
@@ -517,48 +560,73 @@
         });
         observer.observe(document.body, { childList: true, subtree: true });
         
-        // Mobile menu functionality
-        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
-        const closeMenuButton = document.getElementById('close-menu-button');
-        
-        // Mobile dropdown toggles
-        const solutionsToggle = document.getElementById('solutions-mobile-toggle');
-        const solutionsMenu = document.getElementById('solutions-mobile-menu');
-        const industriesToggle = document.getElementById('industries-mobile-toggle');
-        const industriesMenu = document.getElementById('industries-mobile-menu');
+        // Mobile menu functionality - wrapped in DOMContentLoaded to ensure elements exist
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+            const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+            const closeMenuButton = document.getElementById('close-menu-button');
+            
+            // Mobile dropdown toggles
+            const solutionsToggle = document.getElementById('solutions-mobile-toggle');
+            const solutionsMenu = document.getElementById('solutions-mobile-menu');
+            const industriesToggle = document.getElementById('industries-mobile-toggle');
+            const industriesMenu = document.getElementById('industries-mobile-menu');
 
-        solutionsToggle.addEventListener('click', () => {
-            solutionsMenu.classList.toggle('hidden');
-            solutionsToggle.style.transform = solutionsMenu.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(45deg)';
-        });
-
-        industriesToggle.addEventListener('click', () => {
-            industriesMenu.classList.toggle('hidden');
-            industriesToggle.style.transform = industriesMenu.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(45deg)';
-        });
-        
-        mobileMenuToggle.addEventListener('click', function() {
-            mobileMenuOverlay.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        });
-        
-        function closeMobileMenu() {
-            mobileMenuOverlay.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-        
-        closeMenuButton.addEventListener('click', closeMobileMenu);
-        
-        mobileMenuOverlay.addEventListener('click', function(e) {
-            if (e.target === mobileMenuOverlay) {
-                closeMobileMenu();
+            // Ensure elements exist before adding listeners
+            if (solutionsToggle && solutionsMenu) {
+                solutionsToggle.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    solutionsMenu.classList.toggle('hidden');
+                    
+                    // Find and rotate the icon (svg after Lucide processes it)
+                    const icon = solutionsToggle.querySelector('svg');
+                    if (icon) {
+                        icon.style.transform = solutionsMenu.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(45deg)';
+                        icon.style.transition = 'transform 0.3s ease';
+                    }
+                });
             }
-        });
-        
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && mobileMenuOverlay.classList.contains('active')) {
-                closeMobileMenu();
+
+            if (industriesToggle && industriesMenu) {
+                industriesToggle.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    industriesMenu.classList.toggle('hidden');
+                    
+                    // Find and rotate the icon (svg after Lucide processes it)
+                    const icon = industriesToggle.querySelector('svg');
+                    if (icon) {
+                        icon.style.transform = industriesMenu.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(45deg)';
+                        icon.style.transition = 'transform 0.3s ease';
+                    }
+                });
+            }
+            
+            if (mobileMenuToggle && mobileMenuOverlay && closeMenuButton) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    mobileMenuOverlay.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                });
+                
+                function closeMobileMenu() {
+                    mobileMenuOverlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+                
+                closeMenuButton.addEventListener('click', closeMobileMenu);
+                
+                mobileMenuOverlay.addEventListener('click', function(e) {
+                    if (e.target === mobileMenuOverlay) {
+                        closeMobileMenu();
+                    }
+                });
+                
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && mobileMenuOverlay.classList.contains('active')) {
+                        closeMobileMenu();
+                    }
+                });
             }
         });
     </script>
